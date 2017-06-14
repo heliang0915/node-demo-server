@@ -1,0 +1,11 @@
+@mixin box-shadow{
+   box-shadow:5px 5px 5px #ccc;
+}
+@mixin flex{
+    display: flex;
+    align-items:center;
+}
+@mixin center-1024{
+  width: 1024px;
+  margin:0 auto;
+}
