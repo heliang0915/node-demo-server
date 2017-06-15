@@ -1,16 +1,17 @@
 @import './common/index';
 @font-face {
   font-family: 'iconfont';  /* project id 326957 */
-  src: url('//at.alicdn.com/t/font_03hsi9cacreh4cxr.eot');
-  src: url('//at.alicdn.com/t/font_03hsi9cacreh4cxr.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_03hsi9cacreh4cxr.woff') format('woff'),
-  url('//at.alicdn.com/t/font_03hsi9cacreh4cxr.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_03hsi9cacreh4cxr.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_fljn50165pmhd7vi.eot');
+  src: url('//at.alicdn.com/t/font_fljn50165pmhd7vi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_fljn50165pmhd7vi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_fljn50165pmhd7vi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_fljn50165pmhd7vi.svg#iconfont') format('svg');
 }
 body,h1,ul{
   padding: 0;
   margin: 0;
-  font-family: 'iconfont';
+  font-family: PingFangSC-Regular,HelveticaNeue-Light,'Helvetica Neue Light','Microsoft YaHei',sans-serif,'iconfont';
+
 }
 
 ul{
@@ -46,8 +47,9 @@ ul{
           .search{
               font-family: 'iconfont';
               position: relative;
+              margin-right:45px;
               input{
-                border:2px solid $mainColor;
+                border:2.5px solid $mainColor;
                 padding:8px;
                 width: 380px;
                 border-radius:8px;
@@ -55,13 +57,17 @@ ul{
               }
               .search-bar{
                   position: absolute;
-                  right: 6px;
-                  font-size: 14px;
-                  top:7px;
+                  right: 0px;
+                  font-size: 22px;
+                  top:0px;
+                  height: 35px;
+                  line-height:35px;
+                  text-align: center;
+                  width:55px;
+                  cursor: pointer;
               }
           }
           .mybook{
-                 font-weight: none;
                  font-size: $navRight;
                  @include flex;
                 .books{
@@ -78,7 +84,6 @@ ul{
                    border-radius:50%;
                    display: block;
                    margin-left:10px;
-                   // border:1px solid ;
                 }
               }
        }
@@ -89,7 +94,10 @@ ul{
           @include flex;
            height: 64px;
            &:nth-child(1)::before{
-             content: '\e6b7'
+             content: '\e6b7';
+             font-size:22px;
+             margin-top:1px;
+             color: $mainColor;
            }
            li{
               margin-right: 50px;
@@ -104,10 +112,15 @@ ul{
               font-size:$navRight;
               margin-left: 50px; 
               @extend  %common-a;
-
+              &:nth-child(1)::before{
+                content: '\e635';
+                font-size:20px;
+                margin-right:4px;
+              }
               &::before{
-                font-family: 'iconfont';
-                content: '111'
+                content: '\e618';
+                color: $mainColor;
+                font-size:22px;
               }
            }
         }

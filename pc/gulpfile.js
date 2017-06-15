@@ -42,6 +42,7 @@ gulp.task('js',function () {
 gulp.task('watch',function () {
     gulp.watch('sass/*.scss',['sass']);
     gulp.watch('_pages/*',['html']);
+    gulp.watch('_layout/*',['html']);
     gulp.watch('assets/js/*',['js']);
 })
 
