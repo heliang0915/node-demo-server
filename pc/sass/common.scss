@@ -7,31 +7,60 @@
   url('//at.alicdn.com/t/font_fljn50165pmhd7vi.ttf') format('truetype'),
   url('//at.alicdn.com/t/font_fljn50165pmhd7vi.svg#iconfont') format('svg');
 }
-body,h1,ul{
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre, 
+form,fieldset,input,textarea,p,blockquote,th,td {
   padding: 0;
   margin: 0;
   font-family: PingFangSC-Regular,HelveticaNeue-Light,'Helvetica Neue Light','Microsoft YaHei',sans-serif,'iconfont';
-
+}
+table { 
+    border-collapse: collapse; 
+    border-spacing: 0; 
+} 
+fieldset,img { 
+    border: 0; 
+} 
+address,caption,cite,code,dfn,em,strong,th,var { 
+    font-weight: normal; 
+    font-style: normal; 
+} 
+ol,ul { 
+    list-style: none; 
+} 
+caption,th { 
+    text-align: left; 
+} 
+h1,h2,h3,h4,h5,h6 { 
+    font-weight: normal; 
+    font-size: 100%; 
+} 
+q:before,q:after { 
+    content:”; 
+} 
+abbr,acronym { 
+    border: 0; 
 }
 
 ul{
   list-style: none;
 }
 
+.clearfix{
+   clear: both;
+}
 
 .wrap{
     background: #f5f5f5;
-}
-.header{
-    width:100%;
-    height:150px;
-    background:#FFF;
-    @include box-shadow;
-    .top-wrap{
-       @include center-1024;
-      .top{
-          height: 86px; 
-          @include flex;
+    .header{
+      width:100%;
+      height:150px;
+      background:#FFF;
+      @extend %box-shadow;
+      .top-wrap{
+        @extend %center-1024;
+        .top{
+          height: 86px;
+          @extend %flex;
           border-bottom:1px solid #eee;
           justify-content: space-between;
           .logo{
@@ -40,77 +69,77 @@ ul{
             height: 31px;
             background-size:100% 100%;
             & > a{
-                height:100%;
-                width: 100%; 
-                }
+              height:100%;
+              width: 100%;
+            }
           }
           .search{
-              font-family: 'iconfont';
-              position: relative;
-              margin-right:45px;
-              input{
-                border:2.5px solid $mainColor;
-                padding:8px;
-                width: 380px;
-                border-radius:8px;
-                outline: none;
-              }
-              .search-bar{
-                  position: absolute;
-                  right: 0px;
-                  font-size: 22px;
-                  top:0px;
-                  height: 35px;
-                  line-height:35px;
-                  text-align: center;
-                  width:55px;
-                  cursor: pointer;
-              }
+            font-family: 'iconfont';
+            position: relative;
+            margin-right:45px;
+            input{
+              border:2.5px solid $mainColor;
+              padding:8px;
+              width: 380px;
+              border-radius:8px;
+              outline: none;
+            }
+            .search-bar{
+              position: absolute;
+              right: 0px;
+              font-size: 22px;
+              top:0px;
+              height: 35px;
+              line-height:35px;
+              text-align: center;
+              width:55px;
+              cursor: pointer;
+            }
           }
           .mybook{
-                 font-size: $navRight;
-                 @include flex;
-                .books{
-                  &::before{
-                    font-size: 22px;
-                    color: $mainColor;
-                    content: "\e742";
-                    margin-right: 8px;
-                  }
-                }
-                .photo{
-                   height: 30px;
-                   width: 30px;
-                   border-radius:50%;
-                   display: block;
-                   margin-left:10px;
-                }
+            font-size: $navRight;
+            @extend %flex;
+            .books{
+              &::before{
+                font-size: 22px;
+                color: $mainColor;
+                content: "\e742";
+                margin-right: 8px;
               }
-       }
-      .nav{
-        @include flex;
-        justify-content: space-between;
-        .nav-list{
-          @include flex;
-           height: 64px;
-           &:nth-child(1)::before{
-             content: '\e6b7';
-             font-size:22px;
-             margin-top:1px;
-             color: $mainColor;
-           }
-           li{
+            }
+            .photo{
+              height: 30px;
+              width: 30px;
+              border-radius:50%;
+              display: block;
+              margin-left:10px;
+            }
+          }
+        }
+        .nav{
+          @extend %flex;
+          justify-content: space-between;
+          .nav-list{
+            @extend %flex;
+            height: 64px;
+            &:nth-child(1)::before{
+              content: '\e6b7';
+              font-size:22px;
+              margin-top:1px;
+              color: $mainColor;
+            }
+            li{
               margin-right: 50px;
               a{
-                 font-size:$navFont;
-                 @extend %common-a;
+                font-size:$navFont;
+                @extend %common-a;
               }
-           }
-        }
-        .nav-right{
-           a{
+            }
+          }
+          .nav-right{
+            a{
               font-size:$navRight;
-              margin-left: 50px; 
+              margin-left: 50px;
               @extend  %common-a;
               &:nth-child(1)::before{
                 content: '\e635';
@@ -122,7 +151,66 @@ ul{
                 color: $mainColor;
                 font-size:22px;
               }
-           }
+            }
+          }
+        }
+      }
+    }
+    .main{
+      @extend %center-1024;
+      overflow: auto;
+      .main-inner{
+        overflow: auto;
+        margin:12px 0 8px;
+        .block{
+          @include block;
+        }
+      }
+    }
+
+    .footer{
+      margin:12px 0 15px;
+      overflow: hidden;
+      .footer-inner{
+        text-align: center;
+        @extend %center-1024;
+        .web-list{
+           overflow: hidden;
+           font-size:12px;
+           //position: relative;
+          span{
+            display: inline-block;
+            //margin-right:2px;
+            float: left;
+          }
+          div{
+            float: right;
+            width:90%;
+            a{
+              @extend %common-a;
+              margin:0 12px 10px 3px;
+              display: inline-block;
+            }
+          }
+        }
+
+        .about-us{
+          margin: 0px 0 0;
+          a{
+            @extend %common-a;
+            color: #666;
+            margin:0 12px 10px 3px;
+          }
+        }
+        .copyright{
+          font-size: 12px;
+          color: #666;
+          text-align: center;
+          margin: 10px auto 20px;
+          overflow: hidden;
+          p{
+            // line-height: 10px;
+          }
         }
       }
     }

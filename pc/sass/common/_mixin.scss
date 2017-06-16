@@ -1,11 +1,9 @@
-@mixin box-shadow{
-   box-shadow:5px 5px 5px #ccc;
+@mixin  white-block($height:100px){
+  background: #FFF;
+  height: $height;
 }
-@mixin flex{
-    display: flex;
-    align-items:center;
-}
-@mixin center-1024{
-  width: 1024px;
-  margin:0 auto;
+
+@mixin block($height:100px){
+  @include white-block($height);
+  margin-bottom:20px;
 }

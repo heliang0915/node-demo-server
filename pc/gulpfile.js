@@ -6,7 +6,7 @@ var uglify = require('gulp-uglify');
 
 
 gulp.task('sass',function(){
-     gulp.src('sass/*.scss')
+     gulp.src(['sass/*.scss'])
          .pipe(sass({
              outputStyle:'compressed'
          }))
@@ -35,12 +35,9 @@ gulp.task('js',function () {
         .pipe(gulp.dest('assets/minjs'))
 })
 
-
-
-
-
 gulp.task('watch',function () {
     gulp.watch('sass/*.scss',['sass']);
+    gulp.watch('sass/**/*.scss',['sass']);
     gulp.watch('_pages/*',['html']);
     gulp.watch('_layout/*',['html']);
     gulp.watch('assets/js/*',['js']);
