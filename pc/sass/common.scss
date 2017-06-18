@@ -122,21 +122,81 @@ ul{
         .nav{
           @extend %flex;
           justify-content: space-between;
+          position: relative;
           .nav-list{
             @extend %flex;
             height: 64px;
-            &:nth-child(1)::before{
-              content: '\e6b7';
-              font-size:22px;
-              margin-top:1px;
-              color: $mainColor;
+            .active{
+              position: relative;
+              &::after{
+                content: '';
+                height:3px;
+                width:100%;
+                position: absolute;
+                bottom:-17px;
+                background: red;
+                display: block;
+              }
             }
+
+
             li{
               margin-right: 50px;
+              em{
+                font-size:22px;
+                position: relative;
+                top:2px;
+                color: $mainColor;
+                display: inline-block;
+                margin-right:-5px;
+              }
               a{
                 font-size:$navFont;
                 @include common-a($fontColor,16px);
               }
+            }
+          }
+          .flow-nav{
+            position: absolute;
+            top:55px;
+            left:0;
+            z-index: 3;
+            background: #000;
+            padding:10px 0;
+            display: none;
+            &::before{
+              content: '';
+              background: #000;
+              transform:rotate(45deg);
+              height: 20px;
+              width: 20px;
+              position: absolute;
+              top:-2px;
+              left:33%;
+              z-index: -1;
+            }
+            li{
+              padding:2px 15px;
+              &:hover{
+                background: $mainColor;
+              }
+              //em{
+              //    font-family: iconfont;
+              //    color: #666;
+              //    font-size:18px;
+              //}
+              &::before{
+                content:'\e635';
+                color: #666;
+                font-size:18px;
+              }
+            }
+            a{
+              color: #666;
+              display: inline-block;
+              padding:5px 10px;
+              text-decoration:none;
+              //@include common-a('#FFF',16px);
             }
           }
           .nav-right{
@@ -286,7 +346,5 @@ ul{
        }
      }
 }
-
-//
 
 
