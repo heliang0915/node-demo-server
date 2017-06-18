@@ -7,3 +7,19 @@
   @include white-block($height);
   margin-bottom:20px;
 }
+
+@mixin small-btn-border($color:$orangeColor){
+  color:$color ;
+  border:1px solid $color;
+  font-size: 12px;
+}
+
+@mixin common-a($fC:$fontColor,$fz:12px){
+  color: $fC;
+  text-decoration: none;
+  font-size:$fz;
+  cursor: pointer;
+  &:hover{
+    color: $mainColor !important;
+  }
+}
