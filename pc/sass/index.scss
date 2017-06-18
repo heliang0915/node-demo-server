@@ -188,40 +188,6 @@
       .side-right {
         float: left;
         width: 768px;
-
-        .side-item {
-          margin-bottom:15px;
-          width: 50%;
-          float: left;
-          .odd{
-            margin-left:5px !important;
-          }
-          .side-item-inner {
-            //width:90%;
-            margin-left:20px;
-            font-size:12px;
-            .side-item-content{
-              float: left;
-              width:228px;
-              padding-left: 16px;
-              color: #999;
-              h4{
-                font-size:16px;
-                color: #000;
-              }
-              span{
-                margin:9px 0;
-                display: inline-block;
-              }
-              p{
-                margin-top:7px;
-              }
-            }
-            .side-item-pic {
-              float: left;
-            }
-          }
-        }
       }
     }
   }
@@ -229,101 +195,52 @@
 }
 
 //最近更新
-.update{
-  padding-right:25px;
-  .table-list{
-    width:100%;
+.update {
+  padding-right: 25px;
+  .table-list {
+    width: 100%;
     font-size: 12px;
 
     color: $grayColor;
-    td{
+    td {
 
-      border-top:1px solid $boderColor;
-      padding:8px 0;
+      border-top: 1px solid $boderColor;
+      padding: 8px 0;
     }
-    a{
+    a {
       @include common-a;
     }
-    .classify{
-      font-size:14px;
+    .classify {
+      font-size: 14px;
     }
-    .name{
-      max-width:180px;
-      a{
-        font-size:14px;
+    .name {
+      max-width: 180px;
+      a {
+        font-size: 14px;
       }
     }
-    .timer{
-      width:80px;
+    .timer {
+      width: 80px;
       text-align: right;
     }
-    .c1{
-      width:150px;
+    .c1 {
+      width: 150px;
     }
-    .counter{
-      width:100px;
+    .counter {
+      width: 100px;
     }
-    .desc{
-      max-width:300px;
-      a{
+    .desc {
+      max-width: 300px;
+      a {
         color: $grayColor;
       }
     }
   }
 }
 
-
 //热销榜
-.ranks{
+.ranks {
   margin-top: -30px;
-    .rank-item{
-      width:25%;
-      margin-top: 30px;
-      float: left;
-      h3{
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
-      ul{
-        padding-right: 25px;
-        li{
-          border-bottom: 1px solid $boderColor;
-          padding:7px 0;
-          a{
-            @include common-a($fontColor,14px);
-          }
-
-          em{
-            display: inline-block;
-            //padding:5px;
-            height:19px;
-            font-size: 13px;
-            width: 19px;
-            text-align: center;
-            margin-right: 5px;
-          }
-        }
-        .first{
-           em{
-             background:$mainColor;
-             color: #FFF;
-           }
-         }
-        .second{
-            em{
-              background:$rankSecondColor;
-              color: #FFF;
-            }
-          }
-        .three{
-          em{
-            background:$rankThreeColor;
-            color: #FFF;
-          }
-        }
-      }
-    }
 }
 
 //限时免费
