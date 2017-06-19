@@ -8,7 +8,7 @@ var uglify = require('gulp-uglify');
 gulp.task('sass',function(){
      gulp.src(['sass/*.scss'])
          .pipe(sass({
-             outputStyle:'compressed'
+             outputStyle:'expanded'
          }))
          .pipe(rename({suffix:'.min'}))
          .pipe(gulp.dest('assets/css'))

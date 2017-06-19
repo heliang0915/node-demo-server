@@ -1,11 +1,11 @@
 @import './common/index';
 @font-face {
   font-family: 'iconfont';  /* project id 326957 */
-  src: url('//at.alicdn.com/t/font_fljn50165pmhd7vi.eot');
-  src: url('//at.alicdn.com/t/font_fljn50165pmhd7vi.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_fljn50165pmhd7vi.woff') format('woff'),
-  url('//at.alicdn.com/t/font_fljn50165pmhd7vi.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_fljn50165pmhd7vi.svg#iconfont') format('svg');
+  src: url('../fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/iconfont.woff') format('woff'),
+  url('../fonts/iconfont.ttf') format('truetype'),
+  url('../fonts/iconfont.svg#iconfont') format('svg');
 }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre, 
 form,fieldset,input,textarea,p,blockquote,th,td {
@@ -13,7 +13,6 @@ form,fieldset,input,textarea,p,blockquote,th,td {
   margin: 0;
   font-family: PingFangSC-Regular,HelveticaNeue-Light,'Helvetica Neue Light','Microsoft YaHei',sans-serif,'iconfont';
 }
-
 table { 
     border-collapse: collapse; 
     border-spacing: 0;
@@ -178,11 +177,6 @@ ul{
               &:hover{
                 background: $mainColor;
               }
-              //em{
-              //    font-family: iconfont;
-              //    color: #666;
-              //    font-size:18px;
-              //}
               &::before{
                 content:'\e635';
                 color: #666;

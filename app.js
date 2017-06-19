@@ -21,11 +21,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'wellcome')));
-app.use(express.static(path.join(__dirname, 'views')));
+
 app.use(express.static(path.join(__dirname, 'node_modules')));
 
 app.use('/pc', express.static(path.join(__dirname, 'pc')));
 app.use('/wap', express.static(path.join(__dirname, 'wap')));
+
+app.use(express.static(path.join(__dirname, 'data'),{
+    setHeaders:function(res, path){
+        res.setHeader('Content-Type','application/json;charset=UTF-8');
+    }
+}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
