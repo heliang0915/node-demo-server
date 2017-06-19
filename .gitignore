@@ -2,3 +2,6 @@
 .gitignore
 .idea/
 node_modules/
+pc/assets/css
+.DS_Store
+npm-debug.log
