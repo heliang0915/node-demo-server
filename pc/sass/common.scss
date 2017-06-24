@@ -192,9 +192,9 @@ ul{
           }
           .nav-right{
             a{
-              font-size:$navRight;
               margin-left: 50px;
               @include common-a;
+              font-size:$navRight;
               &:nth-child(1)::before{
                 content: '\e635';
                 font-size:20px;

@@ -254,12 +254,12 @@ ul {
 }
 
 .wrap .header .top-wrap .nav .nav-right a {
-  font-size: 14px;
   margin-left: 50px;
   color: #1a1a1a;
   text-decoration: none;
   font-size: 12px;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .wrap .header .top-wrap .nav .nav-right a:hover {
