@@ -19,6 +19,7 @@
   text-decoration: none;
   font-size:$fz;
   cursor: pointer;
+  display: inline-block;
   &:hover{
     color: $mainColor !important;
   }

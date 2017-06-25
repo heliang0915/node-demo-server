@@ -1,4 +1,5 @@
 @import './common/index';
+
 @font-face {
   font-family: 'iconfont';  /* project id 326957 */
   src: url('../fonts/iconfont.eot');
@@ -7,364 +8,385 @@
   url('../fonts/iconfont.ttf') format('truetype'),
   url('../fonts/iconfont.svg#iconfont') format('svg');
 }
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre, 
-form,fieldset,input,textarea,p,blockquote,th,td {
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, input, textarea, p, blockquote, th, td {
   padding: 0;
   margin: 0;
-  font-family: PingFangSC-Regular,HelveticaNeue-Light,'Helvetica Neue Light','Microsoft YaHei',sans-serif,'iconfont';
-}
-table { 
-    border-collapse: collapse; 
-    border-spacing: 0;
-    padding:0;
-    margin:0;
-} 
-fieldset,img { 
-    border: 0; 
-} 
-address,caption,cite,code,dfn,em,strong,th,var { 
-    font-weight: normal; 
-    font-style: normal; 
-} 
-ol,ul { 
-    list-style: none; 
-} 
-caption,th { 
-    text-align: left; 
-} 
-h1,h2,h3,h4,h5,h6 { 
-    font-weight: normal; 
-    font-size: 100%; 
-} 
-q:before,q:after { 
-    content:”; 
-} 
-abbr,acronym { 
-    border: 0; 
+  font-family: "微软雅黑", HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif, 'iconfont';
 }
 
-ul{
+
+a{
+
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  padding: 0;
+  margin: 0;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-weight: normal;
+  font-style: normal;
+}
+
+ol, ul {
   list-style: none;
 }
 
-.clearfix{
-   clear: both;
+caption, th {
+  text-align: left;
 }
 
-.wrap{
-    background: #f5f5f5;
-    .header{
-      width:100%;
-      height:150px;
-      background:#FFF;
-      @extend %box-shadow;
-      .top-wrap{
-        @extend %center-1024;
-        .top{
-          height: 86px;
-          @extend %flex;
-          border-bottom:1px solid #eee;
-          justify-content: space-between;
-          .logo{
-            background:bg('logo.png');
-            width: 143px;
-            height: 31px;
-            background-size:100% 100%;
-            & > a{
-              height:100%;
-              width: 100%;
-            }
-          }
-          .search{
-            font-family: 'iconfont';
-            position: relative;
-            margin-right:45px;
-            input{
-              border:2.5px solid $mainColor;
-              padding:8px;
-              width: 380px;
-              border-radius:8px;
-              outline: none;
-            }
-            .search-bar{
-              position: absolute;
-              right: 0px;
-              font-size: 22px;
-              top:0px;
-              height: 35px;
-              line-height:35px;
-              text-align: center;
-              width:55px;
-              cursor: pointer;
-            }
-          }
-          .mybook{
-            font-size: $navRight;
-            @extend %flex;
-            .books{
-              &::before{
-                font-size: 22px;
-                color: $mainColor;
-                content: "\e742";
-                margin-right: 8px;
-              }
-            }
-            .photo{
-              height: 30px;
-              width: 30px;
-              border-radius:50%;
-              display: block;
-              margin-left:10px;
-            }
-          }
-        }
-        .nav{
-          @extend %flex;
-          justify-content: space-between;
-          position: relative;
-          .nav-list{
-            @extend %flex;
-            height: 64px;
-            .active{
-              position: relative;
-              &::after{
-                content: '';
-                height:3px;
-                width:100%;
-                position: absolute;
-                bottom:-17px;
-                background: red;
-                display: block;
-              }
-            }
-            li{
-              margin-right: 50px;
-              em{
-                font-size:22px;
-                position: relative;
-                top:2px;
-                color: $mainColor;
-                display: inline-block;
-                margin-right:-5px;
-              }
-              a{
-                font-size:$navFont;
-                @include common-a($fontColor,16px);
-              }
-            }
-          }
-          .flow-nav{
-            position: absolute;
-            top:55px;
-            left:0;
-            z-index: 3;
-            background: #000;
-            padding:10px 0;
-            display: none;
-            &::before{
-              content: '';
-              background: #000;
-              transform:rotate(45deg);
-              height: 20px;
-              width: 20px;
-              position: absolute;
-              top:-2px;
-              left:33%;
-              z-index: -1;
-            }
-            li{
-              padding:2px 15px;
-              &:hover{
-                background: $mainColor;
-              }
-              &::before{
-                content:'\e635';
-                color: #666;
-                font-size:18px;
-              }
-            }
-            a{
-              color: #666;
-              display: inline-block;
-              padding:5px 10px;
-              text-decoration:none;
-            }
-          }
-          .nav-right{
-            a{
-              margin-left: 50px;
-              @include common-a;
-              font-size:$navRight;
-              &:nth-child(1)::before{
-                content: '\e635';
-                font-size:20px;
-                margin-right:4px;
-              }
-              &::before{
-                content: '\e618';
-                color: $mainColor;
-                font-size:22px;
-              }
-            }
-          }
-          
-        }
-      }
-    }
-    .main{
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+
+q:before, q:after {
+  content: ”;
+}
+
+abbr, acronym {
+  border: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.wrap {
+  background: #f5f5f5;
+  .header {
+    width: 100%;
+    height: 150px;
+    background: #FFF;
+    @extend %box-shadow;
+    .top-wrap {
       @extend %center-1024;
-      overflow: auto;
-      .main-inner{
-        overflow: auto;
-        margin:12px 0 8px;
-        .block{
-          @include block;
+      .top {
+        height: 86px;
+        @extend %flex;
+        border-bottom: 1px solid #eee;
+        justify-content: space-between;
+        .logo {
+          background: bg('logo.png');
+          width: 143px;
+          height: 31px;
+          background-size: 100% 100%;
+          & > a {
+            height: 100%;
+            width: 100%;
+          }
+        }
+        .search {
+          font-family: 'iconfont';
+          position: relative;
+          margin-right: 45px;
+          input {
+            border: 2.5px solid $mainColor;
+            padding: 8px;
+            width: 380px;
+            border-radius: 8px;
+            outline: none;
+          }
+          .search-bar {
+            position: absolute;
+            right: 0px;
+            font-size: 22px;
+            top: 0px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            width: 55px;
+            cursor: pointer;
+          }
+        }
+        .mybook {
+          font-size: $navRight;
+          @extend %flex;
+          .books {
+            &::before {
+              font-size: 22px;
+              color: $mainColor;
+              content: "\e742";
+              margin-right: 8px;
+            }
+          }
+          .photo {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            display: block;
+            margin-left: 10px;
+          }
         }
       }
-    }
-
-    .footer{
-      margin:12px 0 15px;
-      overflow: hidden;
-      .footer-inner{
-        text-align: center;
-        @extend %center-1024;
-        .web-list{
-           overflow: hidden;
-           font-size:12px;
-           //position: relative;
-          span{
-            display: inline-block;
-            //margin-right:2px;
-            float: left;
+      .nav {
+        @extend %flex;
+        justify-content: space-between;
+        position: relative;
+        .nav-list {
+          @extend %flex;
+          height: 64px;
+          .active {
+            position: relative;
+            &::after {
+              content: '';
+              height: 3px;
+              width: 100%;
+              position: absolute;
+              bottom: -17px;
+              background: red;
+              display: block;
+            }
           }
-          div{
-            float: right;
-            width:90%;
-            a{
-              @include common-a;
-              margin:0 12px 10px 3px;
+          li {
+            margin-right: 50px;
+            em {
+              font-size: 22px;
+              position: relative;
+              top: 2px;
+              color: $mainColor;
               display: inline-block;
+              margin-right: -5px;
+            }
+            a {
+              font-size: $navFont;
+              @include common-a($fontColor, 16px);
+            }
+          }
+        }
+        .flow-nav {
+          position: absolute;
+          top: 55px;
+          left: 0;
+          z-index: 3;
+          background: #000;
+          padding: 10px 0;
+          display: none;
+          &::before {
+            content: '';
+            background: #000;
+            transform: rotate(45deg);
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            top: -2px;
+            left: 33%;
+            z-index: -1;
+          }
+          li {
+            padding: 2px 15px;
+            &:hover {
+              background: $mainColor;
+            }
+            &::before {
+              content: '\e635';
+              color: #666;
+              font-size: 18px;
+            }
+          }
+          a {
+            color: #666;
+            display: inline-block;
+            padding: 5px 10px;
+            text-decoration: none;
+          }
+        }
+        .nav-right {
+          a {
+            margin-left: 50px;
+            @include common-a;
+            font-size: $navRight;
+            &:nth-child(1)::before {
+              content: '\e635';
+              font-size: 20px;
+              margin-right: 4px;
+            }
+            &::before {
+              content: '\e618';
+              color: $mainColor;
+              font-size: 22px;
             }
           }
         }
 
-        .about-us{
-          margin: 0px 0 0;
-          a{
-            @include common-a;
-            color: #666;
-            margin:0 12px 10px 3px;
-          }
+      }
+    }
+  }
+  .main {
+    @extend %center-1024;
+    overflow: auto;
+    .main-inner {
+      overflow: auto;
+      margin: 12px 0 8px;
+      .block {
+        @include block;
+      }
+    }
+  }
+
+  .footer {
+    margin: 12px 0 15px;
+    overflow: hidden;
+    .footer-inner {
+      text-align: center;
+      @extend %center-1024;
+      .web-list {
+        overflow: hidden;
+        font-size: 12px;
+        //position: relative;
+        span {
+          display: inline-block;
+          //margin-right:2px;
+          float: left;
         }
-        .copyright{
-          font-size: 12px;
-          color: #666;
-          text-align: center;
-          margin: 10px auto 20px;
-          overflow: hidden;
-          p{
-            // line-height: 10px;
+        div {
+          float: right;
+          width: 90%;
+          a {
+            @include common-a;
+            margin: 0 12px 10px 3px;
+            display: inline-block;
           }
         }
       }
+
+      .about-us {
+        margin: 0px 0 0;
+        a {
+          @include common-a;
+          color: #666;
+          margin: 0 12px 10px 3px;
+        }
+      }
+      .copyright {
+        font-size: 12px;
+        color: #666;
+        text-align: center;
+        margin: 10px auto 20px;
+        overflow: hidden;
+        p {
+          // line-height: 10px;
+        }
+      }
     }
-}
-
-
-//公共按钮样式
-.btn{
-  @extend %common-btn;
-  &:hover{
-    background:#ffeaed;
   }
 }
 
-.btn-select{
+//公共按钮样式
+.btn {
+  @extend %common-btn;
+  font-weight:lighter;
+  &:hover {
+    background: #ffeaed;
+  }
+}
+
+.btn-select {
   @extend %common-btn;
   background: $mainColor;
   color: #FFF;
+  &:hover{
+    background: $mainColor;
+    color: #FFF;
+  }
 }
 
-.small-btn{
-  padding:0 2px;
+.small-btn {
+  padding: 0 2px;
   @include small-btn-border;
 }
-.btn-red{
-    @include small-btn-border($redColor);
+
+.btn-red {
+  @include small-btn-border($redColor);
 }
 
-.btn-blue{
+.btn-blue {
   @include small-btn-border($blueColor);
 }
 
 
+
+
 //图片hover放大效果
-.div-img{
+.div-img {
   width: 105px;
   height: 138px;
-  border:1px solid #ccc;
+  border: 1px solid #ccc;
   overflow: hidden;
-  a{
+  a {
     height: 100%;
     width: 100%;
     display: inline-block;
-    img{
+    img {
       position: relative;
       top: 0;
       left: 0;
-      height:100%;
+      height: 100%;
       width: 100%;
       transform: scale(1);
       transition: transform .3s ease-out;
-      &:hover{
-        transform: scale(1.05) ;
+      &:hover {
+        transform: scale(1.05);
       }
     }
   }
 }
 
 //栏目容器和标题部分
-.container{
-    @include block(265px);
-    height: auto;
+.container {
+  @include block(265px);
+  height: auto;
+  overflow: hidden;
+  .container-inner {
+    margin: 24px 0px 15px 25px;
     overflow: hidden;
-    .container-inner{
-       margin:24px 0px 15px 25px;
-       overflow: hidden;
-       .channelName{
-         @extend  %hot-h3;
-       }
-     }
+    .channelName {
+      @extend %hot-h3;
+    }
+  }
 }
 
 //新书抢先右侧每一项公共样式
 .side-item {
-  margin-bottom:15px;
+  margin-bottom: 15px;
   width: 50%;
   float: left;
-  .odd{
-    margin-left:5px !important;
+  .odd {
+    margin-left: 5px !important;
   }
   .side-item-inner {
     //width:90%;
-    margin-left:20px;
-    font-size:12px;
-    .side-item-content{
+    margin-left: 20px;
+    font-size: 12px;
+    .side-item-content {
       float: left;
-      width:228px;
+      width: 228px;
       padding-left: 16px;
       color: #999;
-      h4{
-        font-size:16px;
+      h4 {
+        font-size: 16px;
         color: #000;
       }
-      span{
-        margin:9px 0;
+      span {
+        margin: 9px 0;
         display: inline-block;
       }
-      p{
-        margin-top:7px;
+      p {
+        margin-top: 7px;
       }
     }
     .side-item-pic {
@@ -394,12 +416,15 @@ ul{
 
       em {
         display: inline-block;
-        //padding:5px;
         height: 18px;
         font-size: 13px;
         width: 18px;
         text-align: center;
         margin-right: 5px;
+      }
+
+      &:nth-last-child(1) {
+        border-bottom: 0px solid $boderColor;
       }
     }
     .first {
@@ -423,3 +448,162 @@ ul{
   }
 }
 
+//排行页面右侧 搜索样式
+.category {
+  padding:5px 0 ;
+  //margin-left: 20px;
+  border-bottom:1px solid $lighterGrayColor;
+  .category-title {
+    font-size: $h2Font;
+    margin: 5px 0 15px 20px;
+    overflow: hidden;
+  }
+  .category-list {
+    margin: 0 0 10px 20px;
+    overflow: hidden;
+    clear: both;
+    .category-item {
+      float: left;
+      margin-right:14px;
+      &.active {
+        background: $mainColor;
+        border-radius: 3px;
+        a {
+          color: #FFF;
+          font-size: 12px;
+          font-weight: lighter;
+          &:hover {
+            color: #FFF !important;
+          }
+        }
+
+      }
+      a {
+        @include common-a;
+        padding: 2px 8px;
+      }
+    }
+
+  }
+}
+
+//小数分类列表
+.story-list{
+    margin: 20px 0 0 20px;
+   .story-item{
+     border-bottom:1px solid $lighterGrayColor;
+     padding-bottom:20px;
+     margin-right:20px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     position: relative;
+
+
+     &:nth-child(1){
+       .story-item-left{
+         em {
+           background: $mainColor;
+         }
+       }
+     }
+     &:nth-child(2){
+       .story-item-left{
+         em {
+           background: $orangeColor;
+         }
+       }
+     }
+     &:nth-child(3){
+       .story-item-left{
+         em {
+           background: $blueColor;
+         }
+       }
+     }
+
+     &:nth-last-child(1){
+       border-bottom-width:0;
+     }
+
+
+     .story-item-left{
+       em{
+         display: block;
+         height:25px;
+         width:25px;
+         background: $grayColor;
+         color: #FFF;
+         line-height:25px;
+         text-align: center;
+         position: absolute;
+         top:0;
+         left:0;
+       }
+
+     }
+     .story-item-center{
+       margin: 0 30px 0 16px;
+       font-size:12px;
+       color: $grayColor;
+       h3{
+         font-size: 18px;
+         color: #000;
+       }
+       ul{
+         display: flex;
+         align-items: center;
+         color: $grayLigColor;
+          li{
+            padding: 0;
+            display: flex;
+            align-items: center;
+
+            &::after{
+              content: '';
+              height:12px;
+              width: 1px;
+              background: $lighterGrayColor;
+              margin:10px;
+              display: inline-block;
+            }
+            img{
+              display: inline-block;
+              width:14px;
+              height:14px;
+              display: inline-block;
+              margin-right:2px;
+            }
+            a{
+              @include common-a;
+              color: $grayLigColor;
+            }
+          }
+       }
+       p{
+         line-height:20px;
+         font-weight:lighter;
+       }
+       .story-author{
+         margin:10px 0;
+         color: $grayLigColor;
+          a{
+            color: $blueColor;
+            text-decoration: none;
+            margin-right:5px;
+          }
+       }
+     }
+     .story-item-right{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: flex-end;
+       padding-top: 35px;
+       div{
+         margin-top:12px;
+       }
+       min-width:120px;
+     }
+   }
+}
