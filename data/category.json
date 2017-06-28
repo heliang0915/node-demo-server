@@ -1,0 +1,56 @@
+{
+
+  "category":[{
+    "title": "古代言情",
+    "href":"http://www.baiduc.com"
+  },{
+    "title": "仙侠奇缘",
+    "href":"http://www.baiduc.com"
+  },{
+    "title": "古代言情2",
+    "href":"http://www.baiduc.com"
+  },{
+    "title": "古代言情3",
+    "href":"http://www.baiduc.com"
+  },{
+    "title": "古代言情4",
+    "href":"http://www.baiduc.com"
+  },{
+    "title": "古代言情5",
+    "href":"http://www.baiduc.com"
+  }],
+  "list": [
+    {
+      "title": "农门辣女：山里汉子甜宠妻3",
+      "pic": "http://localhost:3000/pc/assets/images/pic.jpg"
+    },
+    {
+      "title": "农门辣女：山里汉子甜宠妻",
+      "pic": "http://localhost:3000/pc/assets/images/hot1.jpg"
+    },
+    {
+      "title": "农门辣女：山里汉子甜宠妻",
+      "pic": "http://localhost:3000/pc/assets/images/pic.jpg"
+    },
+    {
+      "title": "农门辣女：山里汉子甜宠妻",
+      "pic": "http://localhost:3000/pc/assets/images/hot1.jpg"
+    },
+    {
+      "title": "农门辣女：山里汉子甜宠妻",
+      "pic": "http://localhost:3000/pc/assets/images/hot1.jpg"
+    },
+    {
+      "title": "农门辣女：山里汉子甜宠妻",
+      "pic": "http://localhost:3000/pc/assets/images/pic.jpg"
+    },
+    {
+      "title": "农门辣女：山里汉子甜宠妻",
+      "pic": "http://localhost:3000/pc/assets/images/pic.jpg"
+    },
+    {
+      "title": "农门辣女：山里汉子甜宠妻222",
+      "pic": "http://localhost:3000/pc/assets/images/pic.jpg"
+    }
+  ]
+}

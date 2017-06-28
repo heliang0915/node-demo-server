@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../assets/css/ranks.min.css">
 <div class="main-inner">
     <!--排行榜 左侧-->
-    <div class="ranks-left">
+    <div class="wrap-left">
         <ul class="ranks-nav">
             <li><a href="#">全部榜单</a></li>
             <li class="active"><a href="#">热销榜</a></li>
@@ -17,7 +17,7 @@
         </ul>
     </div>
     <!--排行榜 右侧-->
-    <div class="ranks-right">
+    <div class="wrap-right">
         <!--搜索分类-->
         <div class="category">
             <h2 class="category-title">热销榜</h2>
@@ -38,10 +38,8 @@
                 <li class="category-item"><a href="#">月榜</a></li>
             </ul>
         </div>
-
         <!--小说列表-->
         <div class="story-list">
-
             <div class="story-item">
                 <div class="story-item-left">
                     <div class="div-img">
@@ -194,11 +192,24 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
-
-
-
+        <!--分页样式-->
+        <div class="page">
+            <ul>
+                <li class="pre"><a href="#">&lt;</a></li>
+                <li class="active">  <a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>...</li>
+                <li><a href="#">8888</a></li>
+                <li class="next"><a href="#">&gt;</a></li>
+            </ul>
+            <div class="go">
+                <input maxlength="4" type="text">
+                <span>Go</span>
+            </div>
+        </div>
     </div>
 </div>

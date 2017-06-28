@@ -1,49 +1,40 @@
 @import './common/index';
-.ranks-left{
-  padding:0 0 25px 0;
-  background: $whiteColor;
-  float: left;
-  width: 230px;
-  .ranks-nav{
-      li{
-        border-left:3px solid $whiteColor;
-        padding:4px 0 4px 10px ;
-        margin: 8px 0;
-        a{
-          @include common-a;
-          font-size:$navFont;
-        }
-        &.active{
-          border-left:3px solid $mainColor;
-          color: $mainColor;
-          a{
-            color: $mainColor;
-            font-weight:bold;
-          }
-          &::before{
-            color: $mainColor;
-          }
-        }
-        &::before{
-          margin:0 10px 0 6px;
-          content: '\e635';
-          color: #000;
-          font-size:$iconFont ;
-        }
-        &:hover{
-          &::before{
-            color: $mainColor;
-          }
-        }
+
+.ranks-nav{
+  li{
+    border-left:3px solid $whiteColor;
+    padding:4px 0 4px 10px ;
+    margin: 8px 0;
+    a{
+      @include common-a;
+      font-size:$navFont;
+    }
+    &.active{
+      border-left:3px solid $mainColor;
+      color: $mainColor;
+      a{
+        color: $mainColor;
+        font-weight:bold;
       }
+      &::before{
+        color: $mainColor;
+      }
+    }
+    &::before{
+      margin:0 10px 0 6px;
+      content: '\e635';
+      color: #000;
+      font-size:$iconFont ;
+    }
+    &:hover{
+      &::before{
+        color: $mainColor;
+      }
+    }
   }
 }
-.ranks-right{
-  float: right;
-  padding:10px 0 20px;
-  background: $whiteColor;
-  width: 770px;
-  padding:10px 0;
+
+.wrap-right{
   .ranks{
     padding:0 0 0 24px ;
       .rank-item{
@@ -52,4 +43,3 @@
       }
   }
 }
-
