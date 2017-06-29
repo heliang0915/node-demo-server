@@ -378,6 +378,8 @@ ul {
   }
 }
 
+
+
 .small-btn {
   padding: 0 2px;
   @include small-btn-border;
@@ -390,6 +392,11 @@ ul {
 .btn-blue {
   @include small-btn-border($blueColor);
 }
+
+.btn-bg-blue{
+  @include small-btn-bg($blueColor);
+}
+
 
 //图片hover放大效果
 .div-img {

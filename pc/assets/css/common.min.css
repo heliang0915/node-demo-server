@@ -471,6 +471,13 @@ ul {
   font-size: 12px;
 }
 
+.btn-bg-blue {
+  background: #4284ed;
+  border: 1px solid #4284ed;
+  font-size: 12px;
+  color: #FFF;
+}
+
 .div-img {
   width: 105px;
   height: 138px;
