@@ -113,9 +113,17 @@
   margin: 20px 0;
   .tabs {
     .tab-title {
+      li{
+        span{
+          color: $blueColor;
+          margin-left:30px;
+          font-size:13px;
+        }
+      }
       em {
         font-size: 14px;
       }
+
     }
   }
   .tab-content {
