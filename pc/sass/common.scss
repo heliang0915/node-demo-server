@@ -120,6 +120,14 @@ ul {
   clear: both;
 }
 
+.w230{
+  width:$w230 !important;
+}
+.w770{
+  width:$w770 !important;
+}
+
+
 .wrap {
   background: #f5f5f5;
   .header {
@@ -211,7 +219,7 @@ ul {
 
           li {
             margin-right: 50px;
-            &::before{
+            &::before {
               content: '';
             }
             a {
@@ -219,19 +227,18 @@ ul {
               @include common-a($fontColor, 16px);
             }
             &:nth-child(1) {
-              a{
+              a {
                 padding-left: 25px;
               }
             }
-            &:nth-child(1)::before{
+            &:nth-child(1)::before {
               content: '\e6b7';
-              font-size:22px;
+              font-size: 22px;
               position: absolute;
-              top:-2px;
+              top: -2px;
               color: $mainColor;
             }
           }
-
 
         }
         .flow-nav {
@@ -422,9 +429,9 @@ ul {
     }
     .side-ad {
       height: 80px;
-      padding:10px 0 0;
-      img{
-          height:100%;
+      padding: 10px 0 0;
+      img {
+        height: 100%;
       }
     }
   }
@@ -759,6 +766,58 @@ ul {
     }
   }
 }
+
+.hudong::before {
+  font-family: 'iconfont';
+  content: "\e677";
+  font-weight:bold;
+  font-size:20px;
+}
+
+.tabs{
+   .tab-title{
+     display: flex;
+     border-bottom: 1px solid $lighterGrayColor;
+     li {
+       padding: 0 14px 10px;
+       a {
+         color: $fontColor;
+         font-size: 18px;
+         text-decoration: none;
+         //font-weight: 700;
+       }
+       &.active {
+         border-bottom: 2px solid $mainColor;
+         a {
+           color: $mainColor;
+         }
+         position: relative;
+         top: 1px;
+       }
+     }
+   }
+   .tab-content{
+     //限时免费部分
+     .part-left{
+       //display: none;
+       .part-left-content{
+         background: #FFF;
+         padding-top:0px;
+         overflow: hidden;
+       }
+     }
+     //免费作品
+     .part-right{
+       //display: block;
+       margin-top:40px;
+     }
+   }
+
+}
+
+
+
+
 
 //条件选中样式
 //.active{

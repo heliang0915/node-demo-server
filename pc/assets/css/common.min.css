@@ -148,6 +148,14 @@ ul {
   clear: both;
 }
 
+.w230 {
+  width: 230px !important;
+}
+
+.w770 {
+  width: 770px !important;
+}
+
 .wrap {
   background: #f5f5f5;
 }
@@ -323,7 +331,7 @@ ul {
 
 .wrap .header .top-wrap .nav .nav-right a {
   margin-left: 50px;
-  color: #1a1a1a;
+  color: #262626;
   text-decoration: none;
   font-size: 12px;
   cursor: pointer;
@@ -387,7 +395,7 @@ ul {
 }
 
 .wrap .footer .footer-inner .web-list div a {
-  color: #1a1a1a;
+  color: #262626;
   text-decoration: none;
   font-size: 12px;
   cursor: pointer;
@@ -405,7 +413,7 @@ ul {
 }
 
 .wrap .footer .footer-inner .about-us a {
-  color: #1a1a1a;
+  color: #262626;
   text-decoration: none;
   font-size: 12px;
   cursor: pointer;
@@ -652,7 +660,7 @@ ul {
 }
 
 .category .category-list .category-item a {
-  color: #1a1a1a;
+  color: #262626;
   text-decoration: none;
   font-size: 12px;
   cursor: pointer;
@@ -749,7 +757,7 @@ ul {
 }
 
 .story-list .story-item .story-item-center ul li a {
-  color: #1a1a1a;
+  color: #262626;
   text-decoration: none;
   font-size: 12px;
   cursor: pointer;
@@ -886,4 +894,46 @@ ul {
 .wrap-right .ranks .rank-item {
   width: 33.33%;
   margin-top: 20px;
+}
+
+.hudong::before {
+  font-family: 'iconfont';
+  content: "\e677";
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.tabs .tab-title {
+  display: flex;
+  border-bottom: 1px solid #eee;
+}
+
+.tabs .tab-title li {
+  padding: 0 14px 10px;
+}
+
+.tabs .tab-title li a {
+  color: #1a1a1a;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.tabs .tab-title li.active {
+  border-bottom: 2px solid #ff3955;
+  position: relative;
+  top: 1px;
+}
+
+.tabs .tab-title li.active a {
+  color: #ff3955;
+}
+
+.tabs .tab-content .part-left .part-left-content {
+  background: #FFF;
+  padding-top: 0px;
+  overflow: hidden;
+}
+
+.tabs .tab-content .part-right {
+  margin-top: 40px;
 }

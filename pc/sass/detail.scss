@@ -1,0 +1,214 @@
+@import './common/index';
+
+//面包屑
+.tag-list {
+  display: flex;
+  align-items: center;
+  margin: 0 0 20px 0;
+  li {
+    display: flex;
+    align-items: center;
+    color: $aColor;
+    &::after {
+      content: '>';
+      display: inline-block;
+      padding: 0 5px;
+      font-size: 12px;
+    }
+
+    &:nth-last-child(1)::after {
+      content: '';
+      display: inline-block;
+    }
+    a {
+      @include common-a;
+      font-size: 13px;
+    }
+  }
+}
+
+//描述
+.detail-desc {
+  display: flex;
+  background: #FFF;
+  padding: 20px;
+  .detail-left {
+    .div-img {
+      width: 180px;
+      height: 238px;
+      border: 0;
+    }
+  }
+  .detail-right {
+    margin: 0 20px;
+    h3 {
+      font-size: $h2Font;
+      margin-top: 14px;
+      span {
+        font-size: 13px;
+        font-weight: normal;
+      }
+    }
+
+    .story-category {
+      margin: 10px 0;
+      em {
+        padding: 4px 6px;
+        border-radius: 5px;
+      }
+    }
+
+    .story-word {
+      font-size: 12px;
+      margin: 14px 0 10px;
+      em {
+        font-size: 18px;
+      }
+    }
+
+    .story-desc {
+      font-size: 14px;
+      margin: 14px 0;
+      line-height: 25px;
+    }
+
+    .story-opt-area {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .otp-area {
+        a {
+          border-radius: 0;
+          padding: 10px 30px;
+          margin-right: 15px;
+        }
+        .hudong {
+          position: relative;
+          text-indent: 10px;
+          &::before {
+            position: absolute;
+            left: 2px;
+            top: 6px;
+            font-size: 22px;
+          }
+        }
+      }
+      .phone-read {
+        a {
+          color: $blueColor;
+          text-decoration: none;
+          font-size: 14px;
+          &::before {
+            content: '\e629';
+            font-family: 'iconfont';
+          }
+        }
+      }
+    }
+  }
+}
+
+//页签
+.detail-tab {
+  margin: 20px 0;
+  .tabs {
+    .tab-title {
+      em {
+        font-size: 14px;
+      }
+    }
+  }
+  .tab-content {
+    overflow: hidden;
+    margin: 20px 0;
+    .talk {
+      padding: 20px 20px;
+      @extend %flex;
+      h4 {
+        font-size: $h2Font;
+
+      }
+      .talk-a {
+        margin-left: 40px;
+        a {
+          @include common-a;
+          //font-size:12px;
+          text-decoration: none;
+          color: $fontColor;
+          padding: 5px 10px;
+          border-radius: 5px;
+          margin-right: 3px;
+
+          &.active {
+            background: $mainColor;
+            color: #FFF;
+            font-weight: lighter;
+            &:hover {
+              color: #FFF !important;
+            }
+          }
+        }
+      }
+    }
+    .talk-content {
+      .talk-list{
+        border-top: 1px solid $lighterGrayColor;
+        .talk-item {
+          @extend %flex;
+          align-items: flex-start;
+          border-bottom: 1px solid $lighterGrayColor;
+          margin: 20px 0 20px 20px;
+          padding-bottom: 24px;
+          .user-photo {
+            img {
+              width: 42px;
+              height: 42px;
+              border-radius: 50%;
+            }
+          }
+          .talk-detail {
+            font-size: 13px;
+            margin: 0 20px;
+            .from {
+              padding:13px 0;
+              em {
+                font-weight: lighter;
+                color: $grayColor;
+                margin-right: 3px;
+              }
+            }
+            h4{
+              font-size: 16px;
+              color: $blueColor;
+              font-weight:normal;
+              margin-bottom:15px;
+            }
+            p{
+              line-height: 24px;
+              font-size:14px;
+              margin-bottom:16px;
+            }
+            .reply{
+              margin-top:10px;
+              a{
+                @include common-a;
+                font-size:14px;
+                &:hover{
+                  i{
+                    color: $mainColor;
+                  }
+                }
+                i{
+                  font-size:20px;
+                  font-style:normal;
+                  color: $grayColor;
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

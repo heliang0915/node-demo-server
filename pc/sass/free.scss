@@ -1,90 +1,91 @@
 @import './common/index';
 
-.free-tab {
-  .free-tab-title {
-    display: flex;
-    border-bottom: 1px solid $lighterGrayColor;
-    li {
-      padding: 0 14px 10px;
-      a {
-        color: $fontColor;
-        font-size: 18px;
-        text-decoration: none;
-        //font-weight: 700;
-      }
-      &.active {
-        border-bottom: 2px solid $mainColor;
-        a {
-          color: $mainColor;
-        }
-        position: relative;
-        top: 1px;
-      }
+//.free-tab {
+//  .free-tab-title {
+//    display: flex;
+//    border-bottom: 1px solid $lighterGrayColor;
+//    li {
+//      padding: 0 14px 10px;
+//      a {
+//        color: $fontColor;
+//        font-size: 18px;
+//        text-decoration: none;
+//      }
+//      &.active {
+//        border-bottom: 2px solid $mainColor;
+//        a {
+//          color: $mainColor;
+//        }
+//        position: relative;
+//        top: 1px;
+//      }
+//    }
+//  }
+//
+//  .free-tab-content {
+//    //限时免费部分
+//    .limit-part{
+//      display: none;
+//
+//      .free-content{
+//        background: #FFF;
+//        padding-top:0px;
+//        overflow: hidden;
+//      }
+//    }
+//    //免费作品
+//    .free-part{
+//      display: block;
+//      margin-top:40px;
+//    }
+//
+//  }
+//}
+
+.free-ad {
+  margin: 26px 0;
+  width: 100%;
+  height: 160px;
+  background: url('../images/freehead.png') no-repeat;
+  background-size: 100% 100%;
+  color: #FFF;
+  font-weight: lighter;
+  font-family: "微软雅黑", HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif, 'iconfont';
+  .free-ad-title {
+    position: relative;
+    top:50px;
+    left:42px;
+    h3 {
+      font-size: 30px;
+      font-weight: lighter;
+    }
+    p {
+
     }
   }
-
-  .free-tab-content {
-    //限时免费部分
-    .limit-part{
-      display: none;
-      .free-ad {
-        margin: 26px 0;
-        width: 100%;
-        height: 160px;
-        background: url('../images/freehead.png') no-repeat;
-        background-size: 100% 100%;
-        color: #FFF;
-        font-weight: lighter;
-        font-family: "微软雅黑", HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif, 'iconfont';
-        .free-ad-title {
-          position: relative;
-          top:50px;
-          left:42px;
-          h3 {
-            font-size: 30px;
-            font-weight: lighter;
-          }
-          p {
-
-          }
-        }
-        .timer {
-          position: relative;
-          top:3px;
-          left: 368px;
-          font-size:13px;
-          display: flex;
-          width: 290px;
-          li {
-            display: flex;
-            flex-direction:column;
-            align-items: center;
-            min-width: 57px;
-            padding-top:8px;
-            margin-right:20px;
-            em{
-              font-size:32px;
-              display: block;
-              margin-bottom:2px;
-            }
-
-            &:nth-child(1){
-              color: $mainColor;
-            }
-          }
-        }
+  .timer {
+    position: relative;
+    top:3px;
+    left: 368px;
+    font-size:13px;
+    display: flex;
+    width: 290px;
+    li {
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+      min-width: 57px;
+      padding-top:8px;
+      margin-right:20px;
+      em{
+        font-size:32px;
+        display: block;
+        margin-bottom:2px;
       }
-      .free-content{
-        background: #FFF;
-        padding-top:0px;
-        overflow: hidden;
+
+      &:nth-child(1){
+        color: $mainColor;
       }
     }
-    //免费作品
-    .free-part{
-      display: block;
-      margin-top:40px;
-    }
-
   }
 }
