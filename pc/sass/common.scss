@@ -822,6 +822,48 @@ ul {
 
 }
 
+//推荐图书
+.recommend-books {
+  padding:20px 20px;
+  h3{
+    font-size: 20px;
+    margin-bottom:18px;
+  }
+  .side-item{
+    width:100%;
+    margin-bottom: 14px;
+    border-bottom: 1px solid $lighterGrayColor;
+    padding:0 0 14px 0;
+    .side-item-inner{
+      margin-left:0;
+      .side-item-content {
+        width: 118px;
+        padding-left:5px;
+        h4{
+          font-size:14px;
+        }
+        span{
+          margin: 10px 0  ;
+          color:grey;
+          font-weight: lighter;
+        }
+        p{
+          margin-top: 0;
+          line-height: 18px;
+        }
+      }
+      .side-item-pic{
+        width: 65px;
+        height:85px;
+      }
+    }
+
+    &:nth-last-child(1){
+      border-bottom:0;
+    }
+  }
+}
+
 
 
 

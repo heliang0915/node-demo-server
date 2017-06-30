@@ -31,10 +31,17 @@ app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use('/pc', express.static(path.join(__dirname, 'pc')));
 app.use('/wap', express.static(path.join(__dirname, 'wap')));
 app.use(express.static(path.join(__dirname, 'data'),{
+
     setHeaders:function(res, path){
         res.setHeader('Content-Type','application/json;charset=UTF-8');
+        res.setHeader("Access-Control-Allow-Origin", "*");
     }
 }));
+
+// app.use("*",function(req,res,next){
+//     res.header("Access-Control-Allow-Origin", "*");
+//     next();
+// })
 
 app.use('/rank_:type.json',function(req, res, next){
     console.log(12213);

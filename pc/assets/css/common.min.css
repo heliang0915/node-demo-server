@@ -944,3 +944,52 @@ ul {
 .tabs .tab-content .part-right {
   margin-top: 40px;
 }
+
+.recommend-books {
+  padding: 20px 20px;
+}
+
+.recommend-books h3 {
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+.recommend-books .side-item {
+  width: 100%;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #eee;
+  padding: 0 0 14px 0;
+}
+
+.recommend-books .side-item .side-item-inner {
+  margin-left: 0;
+}
+
+.recommend-books .side-item .side-item-inner .side-item-content {
+  width: 118px;
+  padding-left: 5px;
+}
+
+.recommend-books .side-item .side-item-inner .side-item-content h4 {
+  font-size: 14px;
+}
+
+.recommend-books .side-item .side-item-inner .side-item-content span {
+  margin: 10px 0;
+  color: grey;
+  font-weight: lighter;
+}
+
+.recommend-books .side-item .side-item-inner .side-item-content p {
+  margin-top: 0;
+  line-height: 18px;
+}
+
+.recommend-books .side-item .side-item-inner .side-item-pic {
+  width: 65px;
+  height: 85px;
+}
+
+.recommend-books .side-item:nth-last-child(1) {
+  border-bottom: 0;
+}
