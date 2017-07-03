@@ -1,0 +1,93 @@
+@import './common/index';
+
+.my-bg{
+  background:bg('bg.png') ;
+  background-size: 100% 100%;
+  .photo{
+    overflow: hidden;
+    color: #FFF;
+    padding:40px 10px 30px;
+    @extend %flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img{
+      height:80px;
+      width:80px;
+      border-radius:50%;
+    }
+    h4{
+      margin: 14px 0;
+      white-space:nowrap;
+    }
+    p{
+      font-size: 14px;
+    }
+  }
+}
+.user-info{
+  padding:20px 0 0;
+  ul{
+    @extend  %flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    li{
+      padding: 10px 20px;
+      border-left:3px solid #FFF;
+      position: relative;
+      width:100%;
+      .money::before{
+        display: inline-block;
+        content: "\e61f";
+        font-size:20px;
+        font-family: "iconfont" !important;
+      }
+      .me::before{
+        @extend .money;
+        content:"\e660" !important;
+      }
+      a{
+        width:100%;
+        display: inline-block;
+        @include common-a;
+        font-size:16px;
+        &::before{
+          display: inline-block;
+          content: "\e742";
+          width:30px;
+          height:30px;
+          font-size: 24px;
+          margin-right:10px;
+        }
+        em{
+          display:inline-block;
+          width:20px;
+          height:20px;
+          border-radius:50%;
+          color: #FFF;
+          background: $mainColor;
+          text-align: center;
+          line-height:20px;
+          position: absolute;
+          right:70px;
+          top:15px;
+          font-size:13px;
+          font-weight:lighter;
+        }
+      }
+
+      &.active{
+        border-left:3px solid $mainColor;
+        &::before{
+          color: $mainColor;
+        }
+        a{
+          color: $mainColor;
+          font-weight:bold;
+        }
+      }
+    }
+  }
+}
+
