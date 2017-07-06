@@ -471,6 +471,7 @@ ul {
       }
       p {
         margin-top: 7px;
+        line-height: 18px;
       }
     }
     .side-item-pic {
@@ -633,6 +634,14 @@ ul {
       h3 {
         font-size: 18px;
         color: #000;
+        margin: 5px 0;
+        a{
+          @include common-a;
+          font-size: 18px;
+          color: #000;
+          text-decoration: none;
+
+        }
       }
       ul {
         display: flex;
@@ -665,7 +674,7 @@ ul {
         }
       }
       p {
-        line-height: 20px;
+        line-height: 22px;
         font-weight: lighter;
       }
       .story-author {
