@@ -1,6 +1,8 @@
 @import './common/index';
 .wrap-right{
-  padding:10px 0 0;
+  padding: 0;
+
+  background:transparent !important;
 }
 .my-bg{
   background:bg('bg.png') ;
@@ -94,9 +96,10 @@
 }
 .me-title{
   font-size:18px;
+  background: #FFF;
   @extend %flex;
   justify-content: space-between;
-  padding:15px 20px;
+  padding:20px 20px;
   border-bottom:1px solid $lighterGrayColor;
   //a{
   //  @include common-a;
@@ -115,7 +118,7 @@
 
 }
 .book-list{
-
+  background: #FFF;
   .book-item{
     padding:15px 20px;
     border-bottom: 1px solid $lighterGrayColor;
@@ -204,9 +207,33 @@
             visibility: hidden;
           }
       }
-
-
     }
+  }
+}
+
+//分页部分
+.page-part{
+  background: #FFF;
+  margin:0 !important;
+  padding:20px 0 30px;
+}
+//底部
+.me-footer-bottom{
+  background: #FFF;
+  margin-top:10px;
+  padding:20px 30px;
+  @extend %flex;
+  font-size:14px;
+  input{
+    margin-right:10px;
+  }
+  label{
+    margin-right: 20px;
+  }
+  a{
+    @include common-a;
+    font-size:14px;
+    margin-left: 15px;
   }
 }
 
