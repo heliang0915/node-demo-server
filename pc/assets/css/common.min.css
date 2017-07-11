@@ -209,10 +209,16 @@ ul {
   text-align: center;
   width: 55px;
   cursor: pointer;
+  color: #ff3955;
+  font-family: "iconfont";
 }
 
 .wrap .header .top-wrap .top .mybook {
   font-size: 14px;
+}
+
+.wrap .header .top-wrap .top .mybook .books {
+  font-family: "iconfont";
 }
 
 .wrap .header .top-wrap .top .mybook .books::before {
@@ -284,6 +290,7 @@ ul {
   position: absolute;
   top: -2px;
   color: #ff3955;
+  font-family: "iconfont";
 }
 
 .wrap .header .top-wrap .nav .flow-nav {
@@ -320,6 +327,7 @@ ul {
   content: '\e635';
   color: #666;
   font-size: 18px;
+  font-family: "iconfont";
 }
 
 .wrap .header .top-wrap .nav .flow-nav a {
@@ -347,12 +355,14 @@ ul {
   content: '\e635';
   font-size: 20px;
   margin-right: 4px;
+  font-family: "iconfont";
 }
 
 .wrap .header .top-wrap .nav .nav-right a::before {
   content: '\e618';
   color: #ff3955;
   font-size: 22px;
+  font-family: "iconfont";
 }
 
 .wrap .main {
@@ -921,7 +931,7 @@ ul {
 }
 
 .hudong::before {
-  font-family: 'iconfont';
+  font-family: "iconfont";
   content: "\e677";
   font-weight: bold;
   font-size: 20px;

@@ -174,12 +174,15 @@ ul {
             text-align: center;
             width: 55px;
             cursor: pointer;
+            color: $mainColor;
+            font-family: $iconFamily;
           }
         }
         .mybook {
           font-size: $navRight;
           @extend %flex;
           .books {
+            font-family: $iconFamily;
             &::before {
               font-size: 22px;
               color: $mainColor;
@@ -237,6 +240,7 @@ ul {
               position: absolute;
               top: -2px;
               color: $mainColor;
+              font-family: $iconFamily;
             }
           }
 
@@ -269,6 +273,7 @@ ul {
               content: '\e635';
               color: #666;
               font-size: 18px;
+              font-family: $iconFamily;
             }
           }
           a {
@@ -287,11 +292,13 @@ ul {
               content: '\e635';
               font-size: 20px;
               margin-right: 4px;
+              font-family: $iconFamily;
             }
             &::before {
               content: '\e618';
               color: $mainColor;
               font-size: 22px;
+              font-family: $iconFamily;
             }
           }
         }
@@ -784,7 +791,7 @@ ul {
 }
 
 .hudong::before {
-  font-family: 'iconfont';
+  font-family: $iconFamily;
   content: "\e677";
   font-weight:bold;
   font-size:20px;
