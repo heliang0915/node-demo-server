@@ -29,7 +29,9 @@ time, mark, audio, video {
   vertical-align: baseline;
   font-family: "微软雅黑", HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif, 'iconfont';
   background: transparent;
+  outline: none;
 }
+
 
 body {
   line-height: 1;
@@ -41,7 +43,7 @@ em {
 }
 
 :focus {
-  outline: 1;
+  outline: none;
 }
 
 article, aside, canvas, details, figcaption, figure,
@@ -151,6 +153,7 @@ ul {
             height: 100%;
             width: 100%;
             display: inline-block;
+
           }
         }
         .search {
@@ -174,6 +177,7 @@ ul {
             text-align: center;
             width: 55px;
             cursor: pointer;
+            color: $mainColor;
           }
         }
         .mybook {

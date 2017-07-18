@@ -1,0 +1,79 @@
+@import './common/index';
+.me-financial{
+  margin-bottom: 14px;
+}
+.me-title {
+  justify-content: space-between;
+  div{
+    @extend %flex;
+    flex:2;
+    justify-content: flex-start;
+    h2{
+      margin-right: 10px;
+    }
+    .normal:hover{
+      color: #000 !important;
+    }
+  }
+  span{
+    font-size:12px;
+    em{
+      color: $mainColor;
+      margin:0 2px;
+    }
+  }
+}
+.account-info{
+  @extend %flex;
+  background: #FFF;
+  overflow: hidden;
+  justify-content: space-between;
+  padding:10px 20px;
+  .me-account{
+    @extend %flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size:13px;
+    padding:10px 0;
+    em{
+      font-size:40px;
+      padding:8px;
+    }
+  }
+  .me-recharge{
+    .recharge-btn{
+      @include common-a;
+      border-radius: 20px;
+      background: $mainColor;
+      color: #FFF;
+      padding: 11px 18px;
+      font-size:16px;
+      font-weight: lighter;
+      &:hover{
+        color: #FFF !important;
+      }
+      &::before{
+        content: "\e61f";
+        padding-right:5px;
+        font-weight: lighter;
+      }
+    }
+  }
+  table{
+    width:100%;
+    font-size: 12px;
+    text-align: left;
+    margin-bottom:10px;
+    tr{
+      th,td{
+        font-weight:normal;
+        border-bottom: 1px solid $grayLigColor;
+        line-height: 44px;
+        width: 33.3%;
+      }
+      td{
+        border-bottom: 1px solid $lighterGrayColor;
+      }
+    }
+  }
+}
