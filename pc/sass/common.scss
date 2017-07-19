@@ -29,9 +29,7 @@ time, mark, audio, video {
   vertical-align: baseline;
   font-family: "微软雅黑", HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif, 'iconfont';
   background: transparent;
-  outline: none;
 }
-
 
 body {
   line-height: 1;
@@ -43,7 +41,7 @@ em {
 }
 
 :focus {
-  outline: none;
+  outline: 1;
 }
 
 article, aside, canvas, details, figcaption, figure,
@@ -153,7 +151,6 @@ ul {
             height: 100%;
             width: 100%;
             display: inline-block;
-
           }
         }
         .search {
@@ -178,12 +175,14 @@ ul {
             width: 55px;
             cursor: pointer;
             color: $mainColor;
+            font-family: $iconFamily;
           }
         }
         .mybook {
           font-size: $navRight;
           @extend %flex;
           .books {
+            font-family: $iconFamily;
             &::before {
               font-size: 22px;
               color: $mainColor;
@@ -241,6 +240,7 @@ ul {
               position: absolute;
               top: -2px;
               color: $mainColor;
+              font-family: $iconFamily;
             }
           }
 
@@ -273,6 +273,7 @@ ul {
               content: '\e635';
               color: #666;
               font-size: 18px;
+              font-family: $iconFamily;
             }
           }
           a {
@@ -291,11 +292,13 @@ ul {
               content: '\e635';
               font-size: 20px;
               margin-right: 4px;
+              font-family: $iconFamily;
             }
             &::before {
               content: '\e618';
               color: $mainColor;
               font-size: 22px;
+              font-family: $iconFamily;
             }
           }
         }
@@ -788,7 +791,7 @@ ul {
 }
 
 .hudong::before {
-  font-family: 'iconfont';
+  font-family: $iconFamily;
   content: "\e677";
   font-weight:bold;
   font-size:20px;
