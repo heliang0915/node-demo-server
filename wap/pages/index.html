@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>首页Wap</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" type="text/css" href="../assets/css/wap-common.min.css">
+    <script src="../assets/js/rem.js"></script>
+</head>
+<body>
+<header>
+    <span>北京</span>
+    <h3>乐车邦</h3>
+</header>
+<script src="https://cdn.bootcss.com/vue/2.5.8/vue.min.js"></script>
+<main class="wrap">
+    <link rel="stylesheet" href="../assets/css/index.min.css">
+<div class="wap-inner" id="app">
+  <!--banner-->
+  <section class="banner">
+    <img src="../assets/images/banner.jpg" alt="">
+  </section>
+  <!--列表-->
+  <section class="wap-nav-list">
+    <ul>
+      <li>
+        <a href="#">
+          <span class="oil"></span>
+          <em>4S店保养</em>
+          <strong>特惠</strong>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="metal"></span>
+          <em>钣金喷漆</em>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <span class="clear"></span>
+          <em>清洗养护</em>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="repair"></span>
+          <em>4S店维修</em>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="add-oil"></span>
+          <em>加油</em>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="vehicle"></span>
+          <em>洗车</em>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="accumulator"></span>
+          <em>更换电瓶</em>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="sos"></span>
+          <em>紧急救援</em>
+          <strong>全国</strong>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="stop"></span>
+          <em>违章代缴</em>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="parking"></span>
+          <em>智慧停车</em>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <!--头条-->
+  <section class="topline">
+     <section class="top-left">
+       <img src="../assets/images/topline.jpg" alt="">
+     </section>
+     <section class="top-right">
+       <ul id="scroll" :style="{transform:'translateY('+translateX+'px)',transition: 'all '+transition}">
+         <li v-for="item in list">
+           <a href="">
+             {{item.name}}
+           </a>
+         </li>
+       </ul>
+     </section>
+  </section>
+  <!--4个板块-->
+
+  <section class="plat">
+    <ul>
+      <li class="plat-item">
+        <section class="plat-item-left">
+          <p>"洗"从天降</p>
+          <em>12次免费洗车</em>
+        </section>
+        <section class="plat-item-right"></section>
+      </li>
+
+      <li class="plat-item">
+        <section class="plat-item-left">
+          <p>"洗"从天降</p>
+          <em>12次免费洗车</em>
+        </section>
+        <section class="plat-item-right"></section>
+      </li>
+    </ul>
+  </section>
+</div>
+<script>
+  var timer=null;
+  var vm=new Vue({
+      el:"#app",
+      data:{
+        translateX:0,
+        transition:".5s",
+        maxHeight:0,
+        interval:2000,
+        index:0,
+        list:[
+        {
+            name:"洗车这几个地方则就白洗了"
+        },{
+            name:"洗车这几个地则就白洗了2"
+        },{
+            name:"洗车这几个地则就白洗了3"
+        },{
+            name:"洗车这几个地则就白洗了4"
+        },{
+            name:"洗车这几个地则就白洗了5"
+        },{
+                name:"洗车这几个地方则就白洗了"
+         }
+        ]
+      },
+      methods:{
+          move:function(scroll,maxHeight,defaultHeight){
+            if(maxHeight<=Math.abs(Math.floor(this.translateX))){
+                this.index=0;
+                this.transition="0s";
+                this.translateX=-(this.index*defaultHeight);
+            }else{
+                this.transition="0.5s";
+                this.translateX=-(this.index*defaultHeight);
+                this.index++;
+            }
+          }
+      },
+      mounted:function(){
+          var _self = this;
+          setTimeout(function() {
+              var scroll = document.querySelector("#scroll");
+              var children = scroll.children;
+              var defaultHeight = parseFloat(window.getComputedStyle(children[0]).height);
+              var outerHeight = parseFloat(scroll.scrollHeight);
+              var maxHeight = Math.floor(outerHeight - defaultHeight);
+              timer = setInterval(function () {
+                  _self.move(scroll, maxHeight,defaultHeight);
+              }, _self.interval)
+              scroll.addEventListener('mouseover',function(){
+                clearInterval(timer);
+              })
+              scroll.addEventListener('mouseleave',function(){
+                  timer=setInterval(function(){
+                      _self.move(scroll,maxHeight,defaultHeight);
+                  },_self.interval)
+              })
+          },100)
+      }
+  })
+</script>
+</main>
+<footer>
+    <ul>
+        <li>
+            首页
+        </li>
+        <li class="fs">
+            4s店
+        </li>
+        <li class="top-line">
+            头条
+        </li>
+        <li class="me">
+            我的
+        </li>
+    </ul>
+</footer>
+</body>
+</html>

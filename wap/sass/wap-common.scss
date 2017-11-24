@@ -1,0 +1,293 @@
+@import "common/index";
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-family: 'sans-serif', "Microsoft YaHei", "微软雅黑", "Tahoma", "Helvetica";
+  font-size: 10px;
+
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  border: 0px solid #ccc;
+  max-width: 100% !important;
+  vertical-align: middle;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+i,
+em,
+strong,
+th,
+var {
+  font-weight: normal;
+  font-style: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  outline: none;
+}
+
+caption,
+th {
+  text-align: left;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+
+q:before,
+q:after {
+  content: '';
+}
+
+abbr,
+acronym {
+  border: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+:before,
+:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 481974 */
+  src: url('//at.alicdn.com/t/font_481974_8k1fnerupfa8aor.eot');
+  src: url('//at.alicdn.com/t/font_481974_8k1fnerupfa8aor.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_481974_8k1fnerupfa8aor.woff') format('woff'),
+  url('//at.alicdn.com/t/font_481974_8k1fnerupfa8aor.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_481974_8k1fnerupfa8aor.svg#iconfont') format('svg');
+}
+
+body {
+  font-size: $defaultFont;
+  font-family: iconfont;
+}
+
+header {
+  height: .94rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #FFF;
+  z-index: 2;
+  span {
+    position: absolute;
+    top: .3rem;
+    left: .12rem;
+    height: .94rem;
+    display: block;
+    font-size: .28rem;
+  }
+  span::after {
+    content: '';
+    border: 1px solid #ccc;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    height: 8px;
+    width: 8px;
+    position: relative;
+    top: -.08rem;
+    transform: rotate(135deg);
+    display: inline-block;
+    margin-left: .1rem;
+  }
+  h3 {
+    text-align: center;
+    line-height: .94rem;
+    font-size: .32rem;
+    //background: $mainColor;
+  }
+}
+
+main {
+  position: absolute;
+  top: .94rem;
+  width: 100%;
+  overflow: auto;
+  height: 84%;
+  background:#f3f4f8;
+  overflow: auto;
+
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+  background: #FFF;
+  ul {
+    li {
+      float: left;
+      width: 25%;
+      font-size: .25rem;
+      text-align: center;
+      padding: .2rem .4rem;
+      border-top: 1px solid #eee;
+    }
+    li::before {
+      content: '\e602';
+      display: block;
+      font-size: .4rem;
+    }
+    li.active {
+      color: $mainColor;
+      //font-weight:bold;
+    }
+    li.active::before {
+      color: $mainColor;
+    }
+
+    li.fs::before {
+      content: '\e623';
+    }
+    li.top-line::before {
+      content: '\e6cb';
+      font-size: .45rem;
+    }
+    li.me::before {
+      content: '\e619';
+    }
+  }
+}
+
+

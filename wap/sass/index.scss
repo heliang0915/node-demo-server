@@ -1,0 +1,175 @@
+.wap-inner {
+  .banner {
+    height: 3rem;
+    width: 100%;
+  }
+  .wap-nav-list {
+    overflow: hidden;
+    padding-bottom: .15rem;
+    background: #FFF;
+    ul {
+      margin-top: .3rem;
+      li {
+        width: 20%;
+        float: left;
+        height: 2rem;
+        text-align: center;
+        padding: .15rem 0;
+        a {
+          color: #000;
+          position: relative;
+          span {
+            height: 1rem;
+            width: 1rem;
+            display: block;
+            margin-left: .2rem;
+            background: url("../images/oil.png") no-repeat;
+            background-size: 100% 100%;
+          }
+          em {
+            font-size: .25rem;
+            display: inline-block;
+            margin-top: .1rem;
+          }
+          strong {
+            position: absolute;
+            top: -1.12rem;
+            right: -.1rem;
+            display: inline-block;
+            height: .45rem;
+            line-height: .45rem;
+            width: .6rem;
+            border-radius: 5px;
+            background: red;
+            color: #FFF;
+            font-size: .25rem;
+          }
+
+          .pq {
+            background: url("../images/oil.png") no-repeat;
+            background-size: 100% 100%;
+          }
+
+          .clear {
+            background: url("../images/clear.png") no-repeat;
+            background-size: 100% 100%;
+            margin-top: .03rem;
+          }
+          .metal {
+            background: url("../images/metal.png") no-repeat;
+            background-size: 100% 100%;
+            margin-top: .03rem;
+          }
+
+          .repair {
+            background: url("../images/repair.png") no-repeat;
+            background-size: 100% 100%;
+          }
+
+          .add-oil {
+            background: url("../images/add-oil.png") no-repeat;
+            background-size: 100% 100%;
+          }
+          .accumulator {
+            background: url("../images/accumulator.png") no-repeat;
+            background-size: 100% 100%;
+          }
+
+          .vehicle {
+            background: url("../images/vehicle.png") no-repeat;
+            background-size: 100% 100%;
+          }
+
+          .sos {
+            background: url("../images/sos.png") no-repeat;
+            background-size: 100% 100%;
+          }
+          .pay {
+            background: url("../images/pay.png") no-repeat;
+            background-size: 100% 100%;
+          }
+          .stop {
+            background: url("../images/stop.png") no-repeat;
+            background-size: 100% 100%;
+          }
+          .parking {
+            background: url("../images/parking.png") no-repeat;
+            background-size: 100% 100%;
+          }
+        }
+      }
+    }
+  }
+  .topline {
+    display: flex;
+    background: #FFF;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #eee;
+    .top-left {
+      margin: .15rem .1rem;
+      padding: .05rem .3rem;
+      background-size: 100% 100%;
+      border-right: 1px solid #eee;
+      img {
+        width: .75rem;
+        height: .45rem;
+      }
+    }
+    .top-right {
+      flex: 2;
+      position: relative;
+      overflow: hidden;
+      height: .6rem;
+      ul {
+        position: absolute;
+        height: .6rem;
+        transition: all .5s;
+        li {
+          line-height: .6rem;
+          height: .6rem;
+          overflow: hidden;
+          a {
+            padding-left: .3rem;
+            color: #000;
+            font-size: .3rem;
+          }
+        }
+      }
+    }
+  }
+  .plat {
+    background: #FFF;
+    overflow: hidden;
+    width: 100%;
+    margin: .2rem 0 .4rem;
+    overflow: hidden;
+    .plat-item {
+      width: 50%;
+      float: left;
+      border-right: 1px solid #eee;
+      padding:.3rem;
+      font-size:.3rem;
+      .plat-item-left {
+        float: left;
+        em{
+          font-style: normal;
+          display:inline-block;
+        }
+      }
+      .plat-item-right {
+        float: left;
+        display: inline-block;
+        &::after {
+          content: '';
+          display: inline-block;
+          height:.76rem;
+          width: 1rem;
+          margin-left:.2rem;
+          background: url("../images/car.jpg") no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+}
