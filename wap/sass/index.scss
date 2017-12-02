@@ -122,9 +122,10 @@
       overflow: hidden;
       height: .6rem;
       ul {
-        position: absolute;
-        height: .6rem;
-        transition: all .5s;
+        //position: absolute;
+        //height: .6rem;
+        height:auto;
+        //transition: all .5s;
         li {
           line-height: .6rem;
           height: .6rem;
@@ -142,19 +143,29 @@
     background: #FFF;
     overflow: hidden;
     width: 100%;
-    margin: .2rem 0 .4rem;
+    margin: .1rem 0 .0rem 0;
     overflow: hidden;
     .plat-item {
       width: 50%;
       float: left;
       border-right: 1px solid #eee;
-      padding:.3rem;
-      font-size:.3rem;
+      border-top: 1px solid #eee;
+      padding: .3rem .2rem;
+
+      font-size: .3rem;
       .plat-item-left {
         float: left;
-        em{
+        text-align: center;
+        width: 1.8rem;
+        em {
           font-style: normal;
-          display:inline-block;
+          display: inline-block;
+          border: 1px solid #fa5a4b;
+          color: #fa5a4b;
+          border-radius: 15px;
+          padding: .04rem .13rem;
+          margin: .1rem 0;
+          font-size: .24rem;
         }
       }
       .plat-item-right {
@@ -163,12 +174,155 @@
         &::after {
           content: '';
           display: inline-block;
-          height:.76rem;
+          height: .76rem;
           width: 1rem;
-          margin-left:.2rem;
+          margin: .2rem 0 0 .4rem;
           background: url("../images/car.jpg") no-repeat;
           background-size: 100% 100%;
         }
+      }
+      &:nth-child(2) {
+        .plat-item-right::after {
+          background: url("../images/phone.png") no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+      &:nth-child(3) {
+        .plat-item-right::after {
+          background: url("../images/phone.png") no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+  .maintenance {
+    background: #FFF;
+    margin: .2rem 0 .2rem;
+    .maintenance-title {
+      border-bottom: 1px solid #eee;
+      display: flex;
+      padding: .28rem .24rem;
+      justify-content: space-between;
+      h3 {
+        font-size: .32rem;
+      }
+      a {
+        width: 30%;
+        color: #fd9f39;
+        font-size: .29rem;
+        display: flex;
+        align-items: center;
+        &::before {
+          content: '\e657';
+          font-size: .4rem;
+          display: inline-block;
+          text-align: center;
+          width: .3rem;
+          height: .3rem;
+          top: -.1rem;
+          left: -.12rem;
+          position: relative;
+        }
+      }
+    }
+    .maintenance-content {
+      overflow: hidden;
+      ul {
+        overflow: hidden;
+        text-align: center;
+        padding: .3rem;
+        li {
+          width: 25%;
+          float: left;
+          img {
+            height: 1rem;
+            width: 1rem;
+            margin: 0 auto;
+            background-size: cover;
+          }
+          p {
+            text-align: center;
+            margin-top: -2px;
+            font-size: .24rem;
+            font-weight: bold;
+            color: #f75c51;
+          }
+        }
+      }
+    }
+  }
+  .comment-list {
+
+    margin: .2rem 0 .4rem;
+    .comment-title {
+      background: #FFF;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      padding: .28rem .24rem;
+      justify-content: space-between;
+      h3 {
+        font-size: .32rem;
+      }
+    }
+    .comment-item {
+      background: #FFF;
+      .comment-item-title {
+        margin-top: .2rem;
+        padding: .2rem .3rem;
+        display: flex;
+        img {
+          height: 1rem;
+          width: 1rem;
+          border-radius: 50%;
+        }
+        section {
+          display: flex;
+          flex-direction: column;
+          padding: .1rem .4rem .2rem;
+          h4 {
+            font-size: .33rem;
+          }
+          span {
+            display: inline-block;
+            color: #ccc;
+            font-size: .3rem;
+          }
+        }
+      }
+      .comment-desc {
+        color: #ccc;
+        padding-left: .3rem;
+        font-size: .26rem;
+      }
+      .comment-imgs {
+        padding: 0 .2rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        img {
+          height: 2.2rem;
+          width: 2.3rem;
+          margin: .1rem 0;
+        }
+      }
+      p {
+        font-size: .34rem;
+        padding: .1rem .3rem;
+      }
+      .comment-address {
+        font-size: .28rem;
+        padding: .2rem .3rem;
+        &::before {
+          content: '\e623';
+          font-size: .3rem;
+          color: #999;
+        }
+        a {
+          color: #999;
+        }
+      }
+      &:nth-of-type(2) {
+        margin-top: -.2rem;
       }
     }
   }
