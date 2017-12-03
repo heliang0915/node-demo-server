@@ -3,8 +3,6 @@ var sass=require('gulp-sass');
 var wrap=require('gulp-wrap');
 var rename=require('gulp-rename');
 var uglify = require('gulp-uglify');
-
-
 gulp.task('sass',function(){
      gulp.src(['sass/*.scss'])
          .pipe(sass({
@@ -13,7 +11,6 @@ gulp.task('sass',function(){
          .pipe(rename({suffix:'.min'}))
          .pipe(gulp.dest('assets/css'))
 })
-
 gulp.task('html',function(){
     gulp.src(['_pages/*.html'])
         .pipe(wrap({
@@ -25,8 +22,6 @@ gulp.task('html',function(){
         }))
         .pipe(gulp.dest('pages/'))
 })
-
-
 gulp.task('js',function () {
     gulp.src('assets/js/*')
         // .pipe(uglify({mangle: true}))
@@ -34,7 +29,6 @@ gulp.task('js',function () {
         .pipe(rename({suffix:'.min'}))
         .pipe(gulp.dest('assets/minjs'))
 })
-
 gulp.task('watch',function () {
     gulp.watch('sass/*.scss',['sass']);
     gulp.watch('sass/**/*.scss',['sass']);
@@ -42,5 +36,4 @@ gulp.task('watch',function () {
     gulp.watch('_layout/*',['html']);
     gulp.watch('assets/js/*',['js']);
 })
-
 gulp.task('default',['watch']);

@@ -20,7 +20,6 @@
           <em>钣金喷漆</em>
         </a>
       </li>
-
       <li>
         <a href="#">
           <span class="clear"></span>
@@ -78,7 +77,7 @@
        <img src="../assets/images/topline.jpg" alt="">
      </section>
      <section class="top-right">
-       <ul id="scroll" :style="{transform:'translateY('+translateX+'px)',transition: 'all '+transition}">
+       <ul id="scroll" v-rolling="list">
          <li v-for="item in list">
            <a href="">
              {{item.name}}
@@ -310,8 +309,6 @@
   </section>
 </div>
 <script>
-
-  var timer=null;
   var vm=new Vue({
       el:"#app",
       data:{
@@ -331,42 +328,54 @@
             name:"洗车这几个地则就白洗了4"
         },{
             name:"洗车这几个地则就白洗了5"
-        }
+        },{
+                name:"洗车这几个地方则就白洗了"
+          }
         ]
       },
       methods:{
           move:function(scroll,maxHeight,defaultHeight){
-            if(maxHeight<=Math.abs(Math.floor(this.translateX))){
-                this.index=0;
-                this.transition="0s";
-                this.translateX=-(this.index*defaultHeight);
-            }else{
-                this.transition="0.5s";
+                this.transition="0.5s"; //this.index==0?"0s":
                 this.translateX=-(this.index*defaultHeight);
                 this.index++;
-            }
           }
-      },
-      mounted:function(){
-          var _self = this;
-          setTimeout(function() {
-              var scroll = document.querySelector("#scroll");
-              var children = scroll.children;
-              var defaultHeight = parseFloat(window.getComputedStyle(children[0]).height);
-              var outerHeight = parseFloat(scroll.scrollHeight);
-              var maxHeight = Math.floor(outerHeight - defaultHeight);
-              timer = setInterval(function () {
-                  _self.move(scroll, maxHeight,defaultHeight);
-              }, _self.interval)
-              scroll.addEventListener('mouseover',function(){
-                clearInterval(timer);
-              })
-              scroll.addEventListener('mouseleave',function(){
-                  timer=setInterval(function(){
-                      _self.move(scroll,maxHeight,defaultHeight);
-                  },_self.interval)
-              })
-          },100)
       }
+//      ,
+//      mounted:function(){
+//          var _self = this;
+//          setTimeout(function() {
+//              var scroll = document.querySelector("#scroll");
+//              var children = scroll.children;
+//              var defaultHeight = parseFloat(window.getComputedStyle(children[0]).height);
+//              var outerHeight = parseFloat(scroll.scrollHeight);
+//              var maxHeight = Math.floor(outerHeight - defaultHeight);
+//              timer = setInterval(function () {
+//                  _self.move(scroll, maxHeight,defaultHeight);
+//              }, _self.interval)
+//              scroll.addEventListener('mouseover',function(){
+//                clearInterval(timer);
+//              })
+//              scroll.addEventListener('mouseleave',function(){
+//                  timer=setInterval(function(){
+//                      _self.move(scroll,maxHeight,defaultHeight);
+//                  },_self.interval)
+//              })
+//              scroll.addEventListener('transitionend',function(){
+//                    if(_self.index==_self.list.length){
+//                        clearTimeout(timer);
+//                        _self.index=0;
+//                        _self.transition="0s";
+//                        _self.translateX=-(_self.index*defaultHeight);
+//                        setTimeout(function(){ //这块时间差是用来做切换使用的
+//                            _self.move(scroll, maxHeight, defaultHeight);//先执行一下 防止等待时间过长问题
+//                            //从第二条开始重新执行定时器
+//                            timer = setInterval(function () {
+//                                _self.move(scroll, maxHeight, defaultHeight);
+//                            }, _self.interval)
+//                        },50)
+//                    }
+//              })
+//          },100)
+//      }
   })
 </script>
