@@ -18,7 +18,7 @@
 </header>
 <!--js资源-->
 <script src="../assets/minjs/vue.min.js"></script>
-<script src="../assets/minjs/common.min.js"></script>
+<script src="../assets/js/common.js"></script>
 
 <main class="wrap">
     <link rel="stylesheet" href="../assets/css/index.min.css">
@@ -335,11 +335,6 @@
   var vm=new Vue({
       el:"#app",
       data:{
-        translateX:0,
-        transition:".5s",
-        maxHeight:0,
-        interval:2000,
-        index:0,
         list:[
         {
             name:"洗车这几个地方则就白洗了"
@@ -356,50 +351,7 @@
           }
         ]
       },
-      methods:{
-          move:function(scroll,maxHeight,defaultHeight){
-                this.transition="0.5s"; //this.index==0?"0s":
-                this.translateX=-(this.index*defaultHeight);
-                this.index++;
-          }
-      }
-//      ,
-//      mounted:function(){
-//          var _self = this;
-//          setTimeout(function() {
-//              var scroll = document.querySelector("#scroll");
-//              var children = scroll.children;
-//              var defaultHeight = parseFloat(window.getComputedStyle(children[0]).height);
-//              var outerHeight = parseFloat(scroll.scrollHeight);
-//              var maxHeight = Math.floor(outerHeight - defaultHeight);
-//              timer = setInterval(function () {
-//                  _self.move(scroll, maxHeight,defaultHeight);
-//              }, _self.interval)
-//              scroll.addEventListener('mouseover',function(){
-//                clearInterval(timer);
-//              })
-//              scroll.addEventListener('mouseleave',function(){
-//                  timer=setInterval(function(){
-//                      _self.move(scroll,maxHeight,defaultHeight);
-//                  },_self.interval)
-//              })
-//              scroll.addEventListener('transitionend',function(){
-//                    if(_self.index==_self.list.length){
-//                        clearTimeout(timer);
-//                        _self.index=0;
-//                        _self.transition="0s";
-//                        _self.translateX=-(_self.index*defaultHeight);
-//                        setTimeout(function(){ //这块时间差是用来做切换使用的
-//                            _self.move(scroll, maxHeight, defaultHeight);//先执行一下 防止等待时间过长问题
-//                            //从第二条开始重新执行定时器
-//                            timer = setInterval(function () {
-//                                _self.move(scroll, maxHeight, defaultHeight);
-//                            }, _self.interval)
-//                        },50)
-//                    }
-//              })
-//          },100)
-//      }
+      methods:{}
   })
 </script>
 </main>

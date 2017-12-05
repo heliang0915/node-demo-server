@@ -22,7 +22,6 @@ Vue.directive("rolling",function(el,binding){
                 move();
             },interval);
         })
-
         scroll.addEventListener('transitionend',function(){
             if(index==list.length){
                 clearTimeout(timer);
@@ -33,11 +32,14 @@ Vue.directive("rolling",function(el,binding){
                     move();//先执行一下 防止等待时间过长问题
                     //从第二条开始重新执行定时器
                     timer = setInterval(function () {
+                        //重新开启过度
+                        transition=".5s";
                         move();
                     }, interval)
                 },50)
             }
         })
+
         function move(){
             scroll.style.transform='translateY(-'+index*defaultHeight+'px)';
             scroll.style.transition='all '+transition;
