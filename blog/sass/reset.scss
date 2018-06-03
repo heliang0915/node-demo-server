@@ -1,0 +1,177 @@
+@import './common/index';
+
+@font-face {
+  font-family: 'iconfont';  /* project id 692299 */
+  src: url('//at.alicdn.com/t/font_692299_6mgoy77wepbsxlxr.eot');
+  src: url('//at.alicdn.com/t/font_692299_6mgoy77wepbsxlxr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_692299_6mgoy77wepbsxlxr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_692299_6mgoy77wepbsxlxr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_692299_6mgoy77wepbsxlxr.svg#iconfont') format('svg');
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+
+
+  //font-family: -apple-system,BlinkMacSystemFont,Hiragino Sans GB,STHeiti,微软雅黑,Microsoft YaHei,SimHei,Helvetica Neue,Helvetica,Arial,sans-serif;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+em {
+  font-style: normal;
+  display: inline-block;
+}
+
+:focus {
+  outline: 1;
+}
+
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+ul {
+  list-style: none;
+}
+
+a{
+  text-decoration:none;
+  color:#333;
+}
+a:hover{
+  color:#4f9fcf !important;
+}
+
+
+
+/*公共部分样式*/
+.blog-time::before{
+  content: "\e6e0" !important;
+}
+.blog-type::before{
+  content: "\e69e" !important;
+}
+.blog-comment::before{
+  content: "\e66d" !important;
+}
+.blog-read::before{
+  content: "\e608" !important;
+}
+.blog-zan::before{
+  content: "\e6a3" !important;
+}
+.blog-book::before{
+  content: "\ea07" !important;
+}
+.blog-pen::before{
+  content: "\e6a4" !important;
+}
+.blog-tj::before{
+   content: "\e67d" !important;
+}
+
+ .pagination{
+   width: 420px;
+   margin: 40px auto;
+   li{
+     display: inline-block;
+     a{
+       display: inline-block;
+       padding: 10px 14px;
+       text-align: center;
+       background: #FFF;
+     }
+     &.active a{
+       background: #349fe9;
+       color: #FFF;
+     }
+     &.active a:hover{
+       color: #FFF !important;
+     }
+   }
+ }

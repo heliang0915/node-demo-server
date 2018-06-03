@@ -1,0 +1,100 @@
+@import './common/index';
+.main-inner{
+  width: $mainWidth;
+  margin: 26px auto !important;
+  .blog-lf{
+    float: left;
+    width: 754px;
+    .blog-list{
+      .blog-item{
+        background: #FFF;
+        border-radius: 2px;
+        padding: 40px 18px 30px;
+        box-shadow: 1px 5px 10px #eee;
+        margin: 0 0 15px;
+        h3{
+          font-size: 22px;
+          color:#1b1b1b;
+          font-weight: lighter;
+          margin-bottom: 22px;
+          a{
+            color: #333;
+            text-decoration: none;
+          }
+        }
+        .blog-info{
+          margin-bottom:10px;
+          span a{
+            color: #555;
+          }
+          span a::before{
+            content: '111';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            font-family: 'iconfont';
+            text-align: center  ;
+          }
+
+        }
+        p{
+          font-size: 16px;
+          color: #5d5663;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+  .blog-rg{
+    float: right;
+    width: 362px;
+    .blog-block{
+      background: #FFF;
+      margin: 0 0 16px;
+      padding:30px 28px;
+      position: relative;
+      h3{
+        font-size: 20px;
+        font-weight: lighter;
+        //padding-bottom:16px ;
+        //width: 86px;
+        a{
+          color:#333;
+          padding-bottom:16px;
+          border-bottom: 2px solid #349fe9;
+          display: inline-block;
+        }
+      }
+      .blog-block-item{
+        position: relative;
+        top: 0px;
+        border-top: 1px solid #ccc;
+        padding:24px 0 0;
+        li{
+          font-family: 'iconfont';
+           a{
+             color: #333;
+             line-height: 32px;
+             font-size: 16px;
+             &:before{
+               content: '111';
+               display: inline-block;
+               width: 24px;
+               height: 24px;
+               font-size: 20px;
+               margin-right: 5px;
+               font-family: 'iconfont';
+               text-align: center  ;
+             }
+           }
+        }
+      }
+    }
+
+  }
+
+
+
+}
+
+
