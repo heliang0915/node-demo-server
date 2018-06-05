@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../assets/js/plugins/editor/css/editormd.min.css">
 <link rel="stylesheet" href="../assets/css/detail.min.css">
 
 <div class="detail-wrap">
@@ -16,7 +17,6 @@
         </div>
         <!--打赏 点赞-->
         <div class="blog-ds">
-
             <button class="btn-bg blue-outer blog-zan">打赏</button>
             <button class="btn-bg org-outer blog-zan">点赞</button>
             <button class="btn-bg green-outer blog-zan">分享</button>
@@ -24,5 +24,17 @@
     </div>
     <div class="comment-area">
         <h4>发表评论</h4>
+        <div id="editormd">
+            <textarea style="display:none;">### Hello Editor.md !</textarea>
+        </div>
     </div>
+    <script src="../assets/js/plugins/editor/editormd.min.js"></script>
+    <script>
+        $(function() {
+            var editor = editormd("editormd", {
+                height:'500px',
+                path : "../assets/js/plugins/editor/lib/" // Autoload modules mode, codemirror, marked... dependents libs path
+            });
+        });
+    </script>
 </div>

@@ -64,6 +64,9 @@
             display: inline-block;
             font-size: 18px;
             padding:4px 16px;
+            &:hover{
+              color: #FFF !important;
+            }
           }
         }
       }

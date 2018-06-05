@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/layout.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/pagination.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <!-- 头部 -->
+    <div class="header">
+        <div class="header-inner">
+            <h1>
+                <a href="#">科技日记</a>
+            </h1>
+            <ul class="nav">
+                <li> <a href="">首页</a></li>
+                <li> <a href="">面试宝典</a></li>
+                <li> <a href="">Java</a></li>
+                <li> <a href="">开发工具</a></li>
+                <li> <a href="">Linux</a></li>
+                <li> <a href="">小程序</a></li>
+                <li> <a href="">杂文</a></li>
+                <li> <a href="">杂文</a></li>
+                <li> <a href="">杂文</a></li>
+                <li> <a href="">关于我</a></li>
+            </ul>
+            <div class="tip-center" id="tip">
+                <h3>Code Farmer</h3>
+                <p>让Hello World变得更加精彩</p>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-inner">
+                <!--左侧列表-->
+                <div class="blog-lf">
+                    <link rel="stylesheet" href="../assets/js/plugins/editor/css/editormd.min.css">
+<link rel="stylesheet" href="../assets/css/detail.min.css">
+
+<div class="detail-wrap">
+    <div class="blog-area">
+        <h3>Shiro实现App接口登陆</h3>
+        <div class="blog-info">
+            <span><label class="blog-time" href="#">五月 25, 2018</label></span>
+            <span><label class="blog-comment" href="#">0条评论</label></span>
+            <span><label class="blog-read" href="#">56次阅读</label></span>
+            <span><label class="blog-zan" href="#">2人点赞</label></span>
+        </div>
+        <div class="blog-content">
+            <p>实现APP登录之前需要先对Web中Shiro会话做一个了解，在Web中保持Session是通过在Cookie中存放了sessionID来实现会话保持的。Shiro也是提供了SessionDAO专门用于完成会话的持久化用于会话的创建、读取、销毁、更新等操作，普通情况是通过MemorySessionDAO来完成Session的管理。</p>
+            <p> Cookie：Web应用中Cookie由浏览器来维护，每次请求都会在请求头（header）中将其传到后台；</p>
+            <p> Session：由于http是无状态的，但是有时候服务器需要把这次请求的数据保存下来留给下一次请求使用，即需要维护连续请求的状态，这个时候服务器就借助cookie，当浏览器发送请求来服务器的时候，服务器会生成一个唯一的值，写到cookie中返回给浏览器，同时生成一个session对象，这样session和cookie值就有了一一对应关系了，浏览下一次访问的时候就会带着这个cookie值，这个时候服务器就会获得cookie的值，然后在自己的缓存里面查找是否存在和该cookie关联的session;</p>
+        </div>
+        <!--打赏 点赞-->
+        <div class="blog-ds">
+            <button class="btn-bg blue-outer blog-zan">打赏</button>
+            <button class="btn-bg org-outer blog-zan">点赞</button>
+            <button class="btn-bg green-outer blog-zan">分享</button>
+        </div>
+    </div>
+    <div class="comment-area">
+        <h4>发表评论</h4>
+        <div id="editormd">
+            <textarea style="display:none;">### Hello Editor.md !</textarea>
+        </div>
+    </div>
+    <script src="../assets/js/plugins/editor/editormd.min.js"></script>
+    <script>
+        $(function() {
+            var editor = editormd("editormd", {
+                height:'500px',
+                path : "../assets/js/plugins/editor/lib/" // Autoload modules mode, codemirror, marked... dependents libs path
+            });
+        });
+    </script>
+</div>
+                </div>
+                <div class="blog-rg">
+                    <!--小板块-->
+                    <div class="blog-block">
+                        <h3><a href="">近期文章</a></h3>
+                        <ul class="blog-block-item">
+                            <li ><a href="##" class="blog-pen">支付宝支付-网站</a></li>
+                            <li><a href="##" class="blog-pen">Shiro实现App接口登陆</a></li>
+                            <li><a href="##" class="blog-pen">实现手机接口权限校验</a></li>
+                            <li><a href="##" class="blog-pen">微信小程序-引用</a></li>
+                            <li><a href="##" class="blog-pen">实现手机接口权限校验</a></li>
+                        </ul>
+                    </div>
+                    <!--小板块2-->
+                    <div class="blog-block">
+                        <h3><a href="">最热文章</a></h3>
+                        <ul class="blog-block-item">
+                            <li ><a href="##" class="blog-book">支付宝支付-网站</a></li>
+                            <li><a href="##" class="blog-book">Shiro实现App接口登陆</a></li>
+                            <li><a href="##" class="blog-book">实现手机接口权限校验</a></li>
+                            <li><a href="##" class="blog-book">微信小程序-引用</a></li>
+                            <li><a href="##" class="blog-book">实现手机接口权限校验</a></li>
+                        </ul>
+                    </div>
+                    <!--小板块3-->
+                    <div class="blog-block">
+                        <h3><a href="">推荐文章</a></h3>
+                        <ul class="blog-block-item">
+                            <li ><a href="##" class="blog-tj">支付宝支付-网站</a></li>
+                            <li><a href="##" class="blog-tj">Shiro实现App接口登陆</a></li>
+                            <li><a href="##" class="blog-tj">实现手机接口权限校验</a></li>
+                            <li><a href="##" class="blog-tj">微信小程序-引用</a></li>
+                            <li><a href="##" class="blog-tj">实现手机接口权限校验</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="footer">
+        尾部
+    </div>
+</div>
+<script>
+    setTimeout(function(){
+        tip.className="tip-center move-top"
+    },100)
+</script>
+</body>
+</html>

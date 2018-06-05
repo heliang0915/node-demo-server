@@ -1,0 +1,40 @@
+.detail-wrap .blog-area, .detail-wrap .comment-area {
+  background: #FFF;
+  border-radius: 2px;
+  box-shadow: 1px 5px 10px #eee;
+  padding: 40px 25px 30px;
+}
+
+.detail-wrap .blog-area h3, .detail-wrap .comment-area h3 {
+  font-size: 28px;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.detail-wrap .blog-area .blog-info, .detail-wrap .comment-area .blog-info {
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.detail-wrap .blog-area p, .detail-wrap .comment-area p {
+  font-weight: lighter;
+  font-size: 14px;
+  line-height: 30px;
+  color: #444;
+}
+
+.detail-wrap .blog-area .blog-ds, .detail-wrap .comment-area .blog-ds {
+  border-top: 1px solid #ddd;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.detail-wrap .blog-area .blog-content, .detail-wrap .comment-area .blog-content {
+  padding-bottom: 20px !important;
+}
+
+.detail-wrap .blog-area {
+  margin: 20px 0;
+}
