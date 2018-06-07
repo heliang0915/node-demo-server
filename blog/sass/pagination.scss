@@ -8,6 +8,7 @@
       padding: 10px 14px;
       text-align: center;
       background: #FFF;
+      transition: all .4s ease-in-out;
     }
     &.active a{
       background: #349fe9;
@@ -16,5 +17,11 @@
     &.active a:hover{
       color: #FFF !important;
     }
+
+    & a:hover {
+      background: #349fe9;
+      color: #FFF !important;
+    }
+
   }
 }

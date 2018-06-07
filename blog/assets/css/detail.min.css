@@ -38,3 +38,20 @@
 .detail-wrap .blog-area {
   margin: 20px 0;
 }
+
+.detail-wrap .blog-page {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-wrap .blog-page .pre-btn, .detail-wrap .blog-page .next-btn {
+  font-weight: lighter;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  color: #555;
+  padding: 13px 15px;
+  margin: 0 0 20px;
+  cursor: pointer;
+  background: #FFF;
+  user-select: none;
+}

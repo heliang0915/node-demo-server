@@ -25,7 +25,11 @@
       left: 50%;
       margin-left:$halfMainWidth ;
       z-index: 2;
-
+      h1{
+        a:hover{
+          color: #FFF !important;
+        }
+      }
       .tip-center{
         text-align: center;
         color: #FFF;
@@ -37,6 +41,7 @@
           margin-bottom: 22px;
           font-weight: lighter;
           font-size: 36px;
+
         }
       }
 

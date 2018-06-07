@@ -12,6 +12,7 @@
   padding: 10px 14px;
   text-align: center;
   background: #FFF;
+  transition: all .4s ease-in-out;
 }
 
 .pagination li.active a {
@@ -20,5 +21,10 @@
 }
 
 .pagination li.active a:hover {
+  color: #FFF !important;
+}
+
+.pagination li a:hover {
+  background: #349fe9;
   color: #FFF !important;
 }

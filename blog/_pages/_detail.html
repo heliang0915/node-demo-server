@@ -22,17 +22,27 @@
             <button class="btn-bg green-outer blog-zan">分享</button>
         </div>
     </div>
+
+    <div class="blog-page">
+        <span class="pre-btn">< 上一篇</span>
+        <span class="next-btn">下一篇 ></span>
+    </div>
+
     <div class="comment-area">
         <h4>发表评论</h4>
         <div id="editormd">
             <textarea style="display:none;">### Hello Editor.md !</textarea>
+        </div>
+        <div class="blog-ds">
+            <button class="btn-bg blue-outer blog-publish">发表</button>
         </div>
     </div>
     <script src="../assets/js/plugins/editor/editormd.min.js"></script>
     <script>
         $(function() {
             var editor = editormd("editormd", {
-                height:'500px',
+                height:'400px',
+                emoji:true,
                 path : "../assets/js/plugins/editor/lib/" // Autoload modules mode, codemirror, marked... dependents libs path
             });
         });

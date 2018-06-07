@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'iconfont';  /* project id 692299 */
-  src: url('//at.alicdn.com/t/font_692299_6mgoy77wepbsxlxr.eot');
-  src: url('//at.alicdn.com/t/font_692299_6mgoy77wepbsxlxr.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_692299_6mgoy77wepbsxlxr.woff') format('woff'),
-  url('//at.alicdn.com/t/font_692299_6mgoy77wepbsxlxr.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_692299_6mgoy77wepbsxlxr.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_692299_nm6c7rewtsp2e29.eot');
+  src: url('//at.alicdn.com/t/font_692299_nm6c7rewtsp2e29.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_692299_nm6c7rewtsp2e29.woff') format('woff'),
+  url('//at.alicdn.com/t/font_692299_nm6c7rewtsp2e29.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_692299_nm6c7rewtsp2e29.svg#iconfont') format('svg');
 }
 
 html, body, div, span, object, iframe,
@@ -153,6 +153,9 @@ a:hover{
 }
 .blog-tj::before{
    content: "\e67d" !important;
+}
+.blog-publish::before{
+  content: "\e60e" !important;
 }
 
 .blog-info{

@@ -30,6 +30,10 @@
   z-index: 2;
 }
 
+.wrap .header .header-inner h1 a:hover {
+  color: #FFF !important;
+}
+
 .wrap .header .header-inner .tip-center {
   text-align: center;
   color: #FFF;
