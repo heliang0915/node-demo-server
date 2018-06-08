@@ -55,3 +55,15 @@
   background: #FFF;
   user-select: none;
 }
+
+.detail-wrap .comment-area .wangEditor-container, .detail-wrap .comment-area .wangEditor-container * {
+  border-radius: 3px;
+}
+
+.detail-wrap .comment-area .comment-content {
+  margin: 15px 0;
+}
+
+.detail-wrap .comment-area .blog-ds {
+  border-top-width: 0;
+}

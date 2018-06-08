@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../assets/js/plugins/editor/css/editormd.min.css">
+<link rel="stylesheet" href="../assets/js/plugins/editor-wang/css/wangEditor.min.css">
 <link rel="stylesheet" href="../assets/css/detail.min.css">
 
 <div class="detail-wrap">
@@ -30,21 +30,63 @@
 
     <div class="comment-area">
         <h4>发表评论</h4>
-        <div id="editormd">
-            <textarea style="display:none;">### Hello Editor.md !</textarea>
+        <div class="comment-content">
+            <textarea id="content" rows="14" style="width: 100%;"></textarea>
         </div>
         <div class="blog-ds">
             <button class="btn-bg blue-outer blog-publish">发表</button>
         </div>
     </div>
-    <script src="../assets/js/plugins/editor/editormd.min.js"></script>
+    <script src="../assets/js/plugins/editor-wang/js/wangEditor.min.js"></script>
     <script>
-        $(function() {
-            var editor = editormd("editormd", {
-                height:'400px',
-                emoji:true,
-                path : "../assets/js/plugins/editor/lib/" // Autoload modules mode, codemirror, marked... dependents libs path
-            });
-        });
+
+
+       function initEditor(){
+            var self=this;
+            var total=50;
+            var smiles=[];
+            for(var i=0;i<total;i++){
+                var json= {
+                    icon:'http://www.jq22.com/demo/qqFace/arclist/'+(i+1)+'.gif',
+                    value:'[em_'+(i+1)+']'
+                }
+                smiles.push(json);
+            }
+            var editor = new wangEditor('content');
+            editor.config.menus = [
+                'bold',
+                'italic',
+                'strikethrough',
+                'eraser',
+                'forecolor',
+                '|',
+                'fontfamily',
+                'fontsize',
+                'head',
+                'unorderlist',
+                'orderlist',
+                'alignleft',
+                'aligncenter',
+                'alignright',
+                'emotion',
+                'undo',
+                'redo'
+            ];
+            editor.config.emotions = {
+                'default': {
+                    title: '表情',  // 组名称
+                    data: smiles
+                }
+            }
+            // editor.config.emotionsShow = 'value';
+            editor.create();
+            // editor.$txt.html(this.info.article.content);
+            // editor.onchange = function () {
+            //     // onchange 事件中更新数据
+            //     self.info.article.content = editor.$txt.html();
+            // };
+        // },200)
+        }
+       initEditor();
     </script>
 </div>

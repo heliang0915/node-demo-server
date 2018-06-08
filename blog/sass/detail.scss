@@ -48,7 +48,20 @@
       background: #FFF;
       user-select: none;
     }
-    .next-btn{
+  }
+
+  .comment-area{
+    .wangEditor-container, .wangEditor-container *{
+      border-radius: 3px;
+    }
+    .comment-content{
+       margin: 15px 0;
+    }
+    .blog-ds{
+      border-top-width: 0;
     }
   }
+
+
+
 }

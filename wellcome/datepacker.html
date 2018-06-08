@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>datepacker</title>
+    <style type="text/css">
+        body,ul,li,div{
+            margin: 0;
+            padding: 0;
+        }
+        .lf{
+            float: left;
+        }
+        .lr{
+            float: right;
+        }
+        .split{
+
+        }
+
+        .dp-wrap{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #FFF;
+        }
+        .dp-btn{
+            display: inline-block;
+            padding: 10px 20px;
+
+        }
+        .ok{
+            color: #FF9900;
+        }
+        .dp-title{
+            border-bottom: 1px solid #eee;
+            border-top: 1px solid #eee;
+            overflow: hidden;
+        }
+        .dp-container{
+            /*height: 100px;*/
+        }
+        .dp-list{
+            display: flex;
+            overflow: hidden;
+            height: 200px;
+        }
+        .dp-list .dp-item{
+            display: inline-block;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            flex: 1;
+            transition: all 2s ease-out;
+        }
+       .dp-item::before{
+           content: "";
+           display: inline-block;
+           padding: 41px 0;
+       }
+       .dp-item::after{
+            content: "";
+            display: inline-block;
+            padding: 37px 0;
+        }
+        /*.dp-item:nth-child(1){*/
+            /*transform: translate3d(0, -100px, 0)*/
+        /*}*/
+        .dp-list .dp-item div{
+            padding: 7px 0;
+        }
+        .dp-split{
+            background-image:linear-gradient(to bottom, #d0d0d0, #d0d0d0, transparent, transparent), linear-gradient(to top, #d0d0d0, #d0d0d0, transparent, transparent);
+            width: 100%;
+            height: 36px;
+            display: inline-block;
+            background-position: top, bottom;
+            background-size: 100% 1px;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 0;
+            top: 126px;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+<div class="dp-wrap">
+    <div class="dp-title">
+        <span class="dp-btn lf">取消</span>
+        <span class="dp-btn ok lr">确定</span>
+    </div>
+    <div class="dp-container">
+        <span class="dp-split"></span>
+        <ul class="dp-list">
+            <li class="dp-item" style="transform:translate3d(0,0px,0)">
+                <div>2010</div>
+                <div>2011</div>
+                <div>2012</div>
+                <div>2013</div>
+                <div>2014</div>
+                <div>2015</div>
+                <div>2016</div>
+                <div>2017</div>
+                <div>2018</div>
+                <div>2019</div>
+            </li>
+            <li class="dp-item">
+                <div>01</div>
+                <div>02</div>
+                <div>03</div>
+                <div>04</div>
+                <div>05</div>
+                <div>06</div>
+                <div>07</div>
+                <div>08</div>
+                <div>09</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+            </li>
+            <li class="dp-item">
+                <div>01</div>
+                <div>02</div>
+                <div>03</div>
+                <div>04</div>
+                <div>05</div>
+                <div>06</div>
+                <div>07</div>
+                <div>08</div>
+                <div>09</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+                <div>13</div>
+                <div>14</div>
+                <div>15</div>
+                <div>16</div>
+                <div>17</div>
+                <div>18</div>
+                <div>19</div>
+                <div>20</div>
+                <div>21</div>
+                <div>22</div>
+                <div>23</div>
+                <div>24</div>
+                <div>25</div>
+                <div>26</div>
+                <div>27</div>
+                <div>28</div>
+                <div>29</div>
+                <div>30</div>
+                <div>31</div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var items=document.querySelectorAll(".dp-item");
+
+    [].slice.apply(items).forEach(function(item){
+        item.addEventListener('touchstart',touchStartFn,false);
+
+    })
+
+    function touchStartFn(e){
+        e=e.touches[0];
+        this.startY=e.pageY;
+        this.addEventListener('touchmove',touchMoveFn,false);
+        this.addEventListener('touchend',touchEndFn,false);
+    }
+    function touchMoveFn(e){
+        e=e.touches[0];
+        var direction= this.startY>e.pageY?"up":"down";
+        var currentTransformY=this.style.WebkitTransform==""?0:getTransformY(this.style.WebkitTransform);
+        this.moveY=(parseFloat(e.pageY)-parseFloat(this.startY));
+        var len=this.children.length;
+        var finalY= parseFloat(currentTransformY)+parseFloat((direction=="up"?(-(Math.abs(this.moveY))):(Math.abs(this.moveY))));
+        var max=(len-1)*35.4-3;
+        var min=0;
+        finalY=Math.abs(max)<=Math.abs(finalY)?-max:(finalY>=min?min:finalY);
+        this.style.WebkitTransform="translate3d(0,"+finalY+"px,0)"
+    }
+    function touchEndFn(){
+        this.removeEventListener('touchstart',function(){},false);
+        this.removeEventListener('touchmove',function(){},false);
+    }
+
+    function getTransformY(strStyle){
+        var transformY=0;
+        var reg=/(-)?\d+(\.\d+)?px/g;
+        var counter=0;
+        strStyle.replace(reg,function(item,a,index,list){
+          counter++;
+          if(counter==2){
+                transformY=parseFloat(item);
+          }
+        })
+        return transformY;
+    }
+</script>
+</body>
+</html>

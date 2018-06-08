@@ -1,3 +1,6 @@
+/**Vue公共指令部分**/
+
+//vue滚动指令
 Vue.directive("rolling",function(el,binding){
     setTimeout(function () {
         var timer=null;
@@ -9,8 +12,9 @@ Vue.directive("rolling",function(el,binding){
         var scroll =el;
         var children = scroll.children;
         var defaultHeight = parseFloat(window.getComputedStyle(children[0]).height);
-        var outerHeight = parseFloat(scroll.scrollHeight);
-        var maxHeight = Math.floor(outerHeight - defaultHeight);
+        window.onresize=function () {
+            defaultHeight=parseFloat(scroll.scrollHeight);
+        }
         timer = setInterval(function () {
             move();
         }, interval)
@@ -39,7 +43,6 @@ Vue.directive("rolling",function(el,binding){
                 },50)
             }
         })
-
         function move(){
             scroll.style.transform='translateY(-'+index*defaultHeight+'px)';
             scroll.style.transition='all '+transition;
