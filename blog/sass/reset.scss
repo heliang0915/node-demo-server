@@ -157,11 +157,14 @@ a:hover{
 .blog-publish::before{
   content: "\e60e" !important;
 }
-
 .blog-info{
   margin-bottom:10px;
+  span{
+    margin-right: 3px;
+  }
   span a,span label{
     color: #555;
+    font-size: 15px;
   }
   span a::before,span label::before{
     content: '111';
