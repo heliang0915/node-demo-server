@@ -1,0 +1,141 @@
+<link rel="stylesheet" href="../assets/css/index.min.css">
+<!--首页-->
+<div class="index-wrap">
+  <!--banner  -->
+  <section class="banner" id="banner">
+    <section class="iSlider-wrapper" id="iSlider-wrapper"></section>
+  </section>
+  <!-- 分类 导航 -->
+  <section class="navs">
+    <ul>
+      <li>
+        <img src="http://www.17sucai.com/preview/584108/2018-07-07/shop/img/yqyl.png" alt="">
+        <span>邀请有理</span>
+      </li>
+      <li>
+        <img src="http://www.17sucai.com/preview/584108/2018-07-07/shop/img/cjfl.png" alt="">
+        <span>春节福利</span>
+      </li>
+      <li>
+        <img src="http://www.17sucai.com/preview/584108/2018-07-07/shop/img/kbsc.png" alt="">
+        <span>酷比商城</span>
+      </li>
+      <li>
+        <img src="http://www.17sucai.com/preview/584108/2018-07-07/shop/img/sjtx.png" alt="">
+        <span>手机通讯</span>
+      </li>
+      <li>
+        <img src="http://www.17sucai.com/preview/584108/2018-07-07/shop/img/sjpj.png" alt="">
+        <span>手机配件</span>
+      </li>
+    </ul>
+  </section>
+  <!-- 最新动态 -->
+  <section class="news">
+    <section class="title">
+      <strong>最新</strong>
+      <em>资讯</em>
+    </section>
+    <section class="info-list">
+      <p>马上就要开学了，书包买买买！</p>
+      <p>马上就要开学了，书包买买买！2</p>
+      <p>马上就要开学了，书包买买买！3</p>
+    </section>
+    <a href="">更多</a>
+  </section>
+  <!--限时秒杀 -->
+  <section class="second-kill">
+    <section class="kill-title">
+      <section class="left">
+        <h3>限时秒杀</h3>
+        <em>10点场</em>
+      </section>
+      <a href="###">秒抢好货&gt;</a>
+    </section>
+    <ul class="kill-list" id="killList">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide seckill-ware" v-for="i in 5" v-key="i">
+          <a href="###">
+                    <img src="https://m.360buyimg.com/n1/jfs/t15787/353/109633918/16701/5a8390ef/5a27ae6dNc530b5bb.jpg!q70.jpg" alt="">
+                    <em>￥3800</em>
+                    <del>￥10000</del>
+                </a>
+        </div>
+      </div>
+
+      <!-- <li v-for="i in 5" v-key="i">
+        <a href="###">
+            <img src="https://m.360buyimg.com/n1/jfs/t15787/353/109633918/16701/5a8390ef/5a27ae6dNc530b5bb.jpg!q70.jpg" alt="">
+            <em>￥3800</em>
+            <del>￥10000</del>
+        </a>
+      </li> -->
+    </ul>
+  </section>
+  <!--活动图片 -->
+  <section class="activity">
+    <section class="top-1">
+      <a href="###">
+        <img src="https://s2.juancdn.com/jas/180125/a/0/5a6991598150a12f8a70b929_1080x292.gif" alt="">
+      </a>
+    </section>
+    <section class="center-1">
+      <a href="###">
+        <img src="https://goods8.juancdn.com/jas/180125/f/d/5a6991fda9fcf8ad18749379_540x280.png?imageMogr2/quality/85!/format/png" alt="">
+      </a>
+    </section>
+    <section class="center-2">
+      <a href="###">
+        <img src="https://goods8.juancdn.com/jas/180125/f/7/5a6995588150a12cfc124a62_540x280.png?imageMogr2/quality/85!/format/png" alt="">
+      </a>
+    </section>
+    <section class="clearfix"></section>
+    <section class="bottom-1">
+      <a href="###">
+        <img src="https://goods7.juancdn.com/jas/180125/c/d/5a6998f98150a12e8a36d67c_360x304.png?iopcmd=convert&Q=85&dst=png" alt="">
+      </a>
+    </section>
+
+    <section class="bottom-2">
+      <a href="###">
+        <img src="https://goods8.juancdn.com/jas/180125/e/c/5a699928a9fcf805074b5461_360x304.png?imageMogr2/quality/85!/format/png" alt="">
+      </a>
+    </section>
+    <section class="bottom-3">
+      <a href="###">
+        <img src="https://goods1.juancdn.com/jas/180125/1/a/5a699957a9fcf80b4d353e8b_360x304.png?iopcmd=convert&Q=85&dst=png" alt="">
+      </a>
+    </section>
+
+  </section>
+</div>
+<script>
+  setTimeout(function() {
+    var list = [{
+      content: 'https://static.blogapi.top/assets/images/1.jpg'
+    }, {
+      content: 'https://static.blogapi.top/assets/images/1.jpg'
+    }]
+
+    /**
+     * banner
+    */
+    var S = new iSlider({
+      dom: document.getElementById('iSlider-wrapper'),
+      data: list,
+      isOverspread: 1,
+      isAutoplay: 1,
+      animateTime: 800,
+      isLooping: true,
+      plugins: ['dot'],
+      animateType: 'rotate'
+    });
+
+    // 秒杀商品滑动
+    var swiper = new Swiper('.kill-list', {
+      slidesPerView: 3.5,
+      spaceBetween: 5,
+      freeMode: true
+    });
+  }, 1000)
+</script>

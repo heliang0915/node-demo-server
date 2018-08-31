@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <meta content="email=no" name="format-detection">
+  <link rel="stylesheet" href="https://static.blogapi.top/assets/js/plugins/iSlider/iSlider.min.css">
+  <link rel="stylesheet" href="http://www.17sucai.com/preview/584108/2018-07-07/shop/css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/reset.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/layout.min.css">
+</head>
+<body>
+  <div class="wrap" id='app' v-cloak>
+    <!-- 头部 -->
+    <header class="nav" id="topbar">
+      <!--分类图标-->
+      <a href="###" class="nav-list"></a>
+      <section class="nav-search">
+        <section class="search-input"><span>请输入要检索的商品</span></section>
+      </section>
+      <!--购物车图标-->
+      <a href="###" class="nav-car"></a>
+    </header>
+    <!--主体-->
+    <main class="main" id="main">
+      <link rel="stylesheet" href="../assets/css/index.min.css">
+<!--购物车-->
+<div>
+  <br> 购物车
+
+</div>
+
+    </main>
+    <!-- 底部 -->
+    <footer class="footer" id="footer">
+      <ul>
+        <li v-for="(t,i) in toolbar" @click="changeTab(i)">
+          <a :href="t.link">
+              <img :src="selectIndex==i?t.active:t.img" alt="">
+              <em :style="{color:selectIndex==i?'#956bff':'#000'}">{{t.label}}</em>
+           </a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+  <script src="../assets/minjs/rem.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+  <script src="https://static.blogapi.top/assets/js/plugins/iSlider/iSlider.min.js"></script>
+  <script src="https://static.blogapi.top/assets/js/plugins/iSlider/iSlider.animate.min.js"></script>
+  <script src="https://static.blogapi.top/assets/js/plugins/iSlider/iSlider.plugin.dot.min.js"></script>
+  <script src="http://www.17sucai.com/preview/584108/2018-07-07/shop/js/swiper.min.js"></script>
+  <script>
+    //计算内部高度
+    function computedInner() {
+      var winHeight = document.documentElement.clientHeight;
+      var navBarHeight = document.getElementById('topbar').offsetHeight;
+      var footerHeight = document.getElementById('footer').offsetHeight;
+      var main = document.getElementById('main');
+      var app = document.getElementById('app');
+      var diff = winHeight - navBarHeight - footerHeight;
+      main.style.height = diff + "px";
+      app.style.height = winHeight + "px";
+    }
+    window.onresize = computedInner;
+   var vm=new Vue({
+      el:'#app',
+      data:{
+        selectIndex:0,
+        toolbar:[{
+            label:'首页',
+            img:'../assets/images/index.svg',
+            active:'../assets/images/index-active.svg'
+        },{
+          label:'分类',
+          img:'../assets/images/category.svg',
+          active:'../assets/images/category-active.svg'
+        },{
+          label:'发现',
+          img:'../assets/images/find.svg',
+          active:'../assets/images/find-active.svg'
+        },{
+          label:'购物车',
+          img:'../assets/images/car.svg',
+          active:'../assets/images/car-active.svg'
+        },{
+          label:'我的',
+          img:'../assets/images/me.svg',
+          active:'../assets/images/me-active.svg'
+        }]
+      },
+      mounted:function(){
+        setTimeout(function(){
+          computedInner();
+        },100)
+      },
+      methods:{
+        changeTab:function(index){
+          this.selectIndex=index;
+        }
+      }
+   })
+  </script>
+</body>
+</html>

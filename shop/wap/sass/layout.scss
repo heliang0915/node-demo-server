@@ -1,0 +1,130 @@
+@import './common/index';
+.wrap {
+  overflow: hidden;
+  background:#eee;
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 2;
+    height: 0.9rem;
+    width: 100%;
+    background:linear-gradient(#dc78ff,#936cfd);
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'iconfont';
+    & >* {
+      display: inline-block;
+    }
+    .nav-list {
+      margin-left: 0.22rem;
+      &::before{
+        content: "\e6b9";
+        display: inline-block;
+        width: 0.46rem;
+        height: 0.4rem;
+        font-size: 0.42rem;
+        color: #FFF;
+      }
+    }
+    .nav-search {
+      flex:2;
+      display: flex;
+      align-items: center;
+      & .search-input{
+         flex:1;
+         border-radius: 5px;
+         background:#8c59c0;
+         margin:0 .15rem;
+         padding:0.12rem 0.26rem;
+         font-family: '微软雅黑','iconfont';
+         color: #FFF;
+         display: flex;
+         position: relative;
+         top: 1px;
+         align-items: center;
+         span{
+           font-size: 0.26rem;
+         }
+         &::before{
+           content: "\e627";
+           display: inline-block;
+           width: 0.38rem;
+           height: 0.36rem;
+           font-size: 0.36rem;
+           font-weight: lighter;
+           color: #FFF;
+         }
+      }
+    }
+    .nav-car {
+      margin-right: 0.22rem;
+      &::before{
+        content: "\e62c";
+        display: inline-block;
+        width: 0.46rem;
+        height: 0.38rem;
+        font-size: 0.52rem;
+        color: #FFF;
+      }
+    }
+  }
+  .main{
+    overflow: auto;
+    width: 100%;
+    padding: 0.9rem 0 1rem;
+  }
+  .footer{
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    background: #FFF;
+    // height: 1rem;
+    width: 100%;
+    border-top: 1px solid #dfdfdf;
+    & ul{
+       display: flex;
+       justify-content:center;
+       align-items: center;
+       & li{
+         padding:.1rem .2rem;
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         flex:1;
+         &.active i,&.active em{
+           color: $mainColor;
+         }
+         a{
+           &:hover {
+             color:#999 !important;
+           }
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           color: #999;
+           img{
+             width: .5rem;
+             height: .5rem;
+           }
+           i{
+              font-family: 'iconfont';
+              font-style: normal;
+              width: .5rem;
+              height: .5rem;
+              display: block;
+              font-size: .45rem;
+           }
+           em{
+              display: block;
+              text-align: center;
+              margin-top: .06rem;
+           }
+         }
+       }
+    }
+
+  }
+}
