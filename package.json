@@ -19,8 +19,12 @@
     "gulp-uglify": "^3.0.0",
     "gulp-wrap": "^0.13.0",
     "install": "^0.11.0",
+    "islider.js": "^2.2.5",
     "jade": "~1.11.0",
     "morgan": "~1.8.1",
     "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.3"
   }
 }

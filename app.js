@@ -31,8 +31,8 @@ app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use('/pc', express.static(path.join(__dirname, 'pc')));
 app.use('/wap', express.static(path.join(__dirname, 'wap')));
 app.use('/blog', express.static(path.join(__dirname, 'blog')));
+app.use('/shop', express.static(path.join(__dirname, 'shop')));
 app.use(express.static(path.join(__dirname, 'data'),{
-
     setHeaders:function(res, path){
         res.setHeader('Content-Type','application/json;charset=UTF-8');
         res.setHeader("Access-Control-Allow-Origin", "*");
