@@ -130,3 +130,6 @@ a:hover{
 .clearfix{
   clear: both;
 }
+div{
+    -webkit-overflow-scrolling: touch;
+}
