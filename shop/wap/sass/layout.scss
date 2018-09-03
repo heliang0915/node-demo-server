@@ -1,6 +1,7 @@
 @import './common/index';
 .wrap {
-  overflow: hidden;
+  // overflow: hidden;
+  // overflow: auto;
   background:#eee;
   .nav {
     position: fixed;
@@ -77,6 +78,7 @@
   }
   .footer{
     position:fixed;
+    z-index: 2;
     bottom: 0;
     width: 100%;
     background: #FFF;
@@ -95,6 +97,21 @@
          flex:1;
          &.active i,&.active em{
            color: $mainColor;
+         }
+         i{
+           display: block;
+           width: .28rem;
+           height: .28rem;
+           background: red;
+           text-align: center;
+           border-radius: 50%;
+           line-height: .3rem;
+           font-style: normal;
+           color: #FFF;
+           position: relative;
+           top:-.1rem;
+           left: -.26rem;
+           font-size:.2rem;
          }
          a{
            &:hover {

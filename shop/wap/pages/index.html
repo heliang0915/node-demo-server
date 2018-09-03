@@ -41,25 +41,20 @@
         <i class="icon-yqyl"></i>
         <span>邀请有理</span>
       </li>
-
       <li>
         <i class="icon-cjfl"></i>
-        <!-- <img src="http://www.17sucai.com/preview/584108/2018-07-07/shop/img/cjfl.png" alt=""> -->
         <span>春节福利</span>
       </li>
       <li>
         <i class="icon-kbsc"></i>
-        <!-- <img src="http://www.17sucai.com/preview/584108/2018-07-07/shop/img/kbsc.png" alt=""> -->
         <span>酷比商城</span>
       </li>
       <li>
         <i class="icon-sjtx"></i>
-        <!-- <img src="http://www.17sucai.com/preview/584108/2018-07-07/shop/img/sjtx.png" alt=""> -->
         <span>手机通讯</span>
       </li>
       <li>
         <i class="icon-sjpj"></i>
-        <!-- <img src="http://www.17sucai.com/preview/584108/2018-07-07/shop/img/sjpj.png" alt=""> -->
         <span>手机配件</span>
       </li>
     </ul>
@@ -86,7 +81,7 @@
       </section>
       <a href="###">秒抢好货&gt;</a>
     </section>
-    <ul class="kill-list" id="killList">
+    <div class="kill-list" id="killList">
       <div class="swiper-wrapper">
         <div class="swiper-slide seckill-ware" v-for="i in 5" v-key="i">
           <a href="###">
@@ -104,7 +99,7 @@
             <del>￥10000</del>
         </a>
       </li> -->
-    </ul>
+    </div>
   </section>
   <!--活动图片 -->
   <section class="activity">
@@ -142,6 +137,26 @@
     </section>
 
   </section>
+  <!--推荐商品-->
+  <section class="rd-area">
+    <section class="rd-title">
+      <img src="https://static.blogapi.top/assets/images/shop/rdtitle.png" alt="">
+    </section>
+
+    <ul class="rd-list">
+      <li v-for="i in 6">
+        <a href="##">
+          <section class="vip-img">
+            <img src="https://static.blogapi.top/assets/images/shop/iphone.jpg" alt="">
+            <span>vip专享</span>
+          </section>
+          <h3>Apple 苹果 iPhoneX 全新发布</h3>
+          <p>全网通 64G 深空灰</p>
+          <em>￥3800</em>
+        </a>
+      </li>
+    </ul>
+  </section>
 </div>
 <script>
   setTimeout(function() {
@@ -153,7 +168,7 @@
 
     /**
      * banner
-    */
+     */
     var S = new iSlider({
       dom: document.getElementById('iSlider-wrapper'),
       data: list,
@@ -171,7 +186,7 @@
       spaceBetween: 5,
       freeMode: true
     });
-  }, 1000)
+  }, 500)
 </script>
 
     </main>
@@ -183,6 +198,8 @@
               <img :src="selectIndex==i?t.active:t.img" alt="">
               <em :style="{color:selectIndex==i?'#956bff':'#000'}">{{t.label}}</em>
            </a>
+           <!--控制显示-->
+           <i v-if="i==3">8</i>
         </li>
       </ul>
     </footer>
@@ -205,7 +222,7 @@
       main.style.height = diff + "px";
       app.style.height = winHeight + "px";
     }
-    window.onresize = computedInner;
+    // window.onresize = computedInner;
    var vm=new Vue({
       el:'#app',
       data:{
@@ -213,29 +230,34 @@
         toolbar:[{
             label:'首页',
             img:'../assets/images/index.svg',
-            active:'../assets/images/index-active.svg'
+            active:'../assets/images/index-active.svg',
+            link:'../pages/index.html'
         },{
           label:'分类',
           img:'../assets/images/category.svg',
-          active:'../assets/images/category-active.svg'
+          active:'../assets/images/category-active.svg',
+          link:'../pages/category.html'
         },{
           label:'发现',
           img:'../assets/images/find.svg',
-          active:'../assets/images/find-active.svg'
+          active:'../assets/images/find-active.svg',
+          link:'../pages/find.html'
         },{
           label:'购物车',
           img:'../assets/images/car.svg',
-          active:'../assets/images/car-active.svg'
+          active:'../assets/images/car-active.svg',
+          link:'../pages/car.html'
         },{
           label:'我的',
           img:'../assets/images/me.svg',
-          active:'../assets/images/me-active.svg'
+          active:'../assets/images/me-active.svg',
+          link:'../pages/me.html'
         }]
       },
       mounted:function(){
-        setTimeout(function(){
-          computedInner();
-        },100)
+        // setTimeout(function(){
+        //   computedInner();
+        // },100)
       },
       methods:{
         changeTab:function(index){

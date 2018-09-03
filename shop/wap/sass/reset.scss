@@ -121,9 +121,9 @@ a{
   text-decoration:none;
   color:$aColor;
 }
-a:hover{
-  color:$aHover !important;
-}
+// a:hover{
+//   color:$aHover !important;
+// }
 [v-cloak]{
   visibility:hidden;
 }
