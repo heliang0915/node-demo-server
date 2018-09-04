@@ -1,13 +1,12 @@
 @import './common/index';
 @font-face {
   font-family: 'iconfont';  /* project id 815778 */
-  src: url('//at.alicdn.com/t/font_815778_qfowff0feqc.eot');
-  src: url('//at.alicdn.com/t/font_815778_qfowff0feqc.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_815778_qfowff0feqc.woff') format('woff'),
-  url('//at.alicdn.com/t/font_815778_qfowff0feqc.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_815778_qfowff0feqc.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_815778_wmv0g014j4j.eot');
+  src: url('//at.alicdn.com/t/font_815778_wmv0g014j4j.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_815778_wmv0g014j4j.woff') format('woff'),
+  url('//at.alicdn.com/t/font_815778_wmv0g014j4j.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_815778_wmv0g014j4j.svg#iconfont') format('svg');
 }
-
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -119,11 +118,20 @@ ul {
 
 a{
   text-decoration:none;
-  color:$aColor;
 }
-a:hover{
-  color:$aHover !important;
+
+a,a:hover,a:active,a:visited,a:link,a:focus{
+    // -webkit-tap-highlight-color:rgba(0,0,0,0.1);
+    // -webkit-tap-highlight-color: transparent;
+    outline:none;
+    // background: none;
+    text-decoration: none;
 }
+
+section {
+  -webkit-tab-highlight-color: rgba(0,0,0,0);
+}
+
 [v-cloak]{
   visibility:hidden;
 }
@@ -134,8 +142,11 @@ div{
     -webkit-overflow-scrolling: touch;
 }
 /*放置公共样式*/
-.icon-cjfl{background: url('https://static.blogapi.top/assets/images/shop/sprite.png?temp=123') no-repeat 0px 0px;background-size: 174px 111px;width: 48px;height: 48px;}
-.icon-kbsc{background: url('https://static.blogapi.top/assets/images/shop/sprite.png?temp=123') no-repeat -63px 0px;background-size: 174px 111px;width: 48px;height: 48px;}
-.icon-sjpj{background: url('https://static.blogapi.top/assets/images/shop/sprite.png?temp=123') no-repeat 0px -63px;background-size: 174px 111px;width: 48px;height: 48px;}
-.icon-sjtx{background: url('https://static.blogapi.top/assets/images/shop/sprite.png?temp=123') no-repeat -63px -63px;background-size: 174px 111px;width: 48px;height: 48px;}
-.icon-yqyl{background: url('https://static.blogapi.top/assets/images/shop/sprite.png?temp=123') no-repeat -126px 0px;background-size: 174px 111px;width: 48px;height: 48px;}
+.icon-cjfl{background: url('//static.blogapi.top/assets/images/shop/sprite.png?temp=123') no-repeat 0px 0px;background-size: 174px 111px;width: 48px;height: 48px;}
+.icon-kbsc{background: url('//static.blogapi.top/assets/images/shop/sprite.png?temp=123') no-repeat -63px 0px;background-size: 174px 111px;width: 48px;height: 48px;}
+.icon-sjpj{background: url('//static.blogapi.top/assets/images/shop/sprite.png?temp=123') no-repeat 0px -63px;background-size: 174px 111px;width: 48px;height: 48px;}
+.icon-sjtx{background: url('//static.blogapi.top/assets/images/shop/sprite.png?temp=123') no-repeat -63px -63px;background-size: 174px 111px;width: 48px;height: 48px;}
+.icon-yqyl{background: url('//static.blogapi.top/assets/images/shop/sprite.png?temp=123') no-repeat -126px 0px;background-size: 174px 111px;width: 48px;height: 48px;}
+.islider-dot-wrap{
+  z-index: 1;
+}

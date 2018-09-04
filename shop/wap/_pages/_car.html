@@ -1,6 +1,37 @@
-<link rel="stylesheet" href="../assets/css/index.min.css">
+<link rel="stylesheet" href="../assets/css/car.min.css">
 <!--购物车-->
-<div>
-  <br> 购物车
+<section class="car-wrap">
+  <!-- 统计 -->
+  <section class="title">
+    <span>产品清单</span>
+    <span>总件数</span>
+  </section>
+  <!--分类 -->
+  <section class="car-list">
+    
+    <section>
+      <input type="checkbox" id="smSel"> <label for="smSel">Apple产品专营店</label>
+      <ul class="car-group">
+        <li class="pro-item" v-for='i in 4'>
+          <section>
+            <input type="checkbox" id="ss"><label for="ss"></label>
+          </section>
+          <section class="pro-info">
+            <img src="https://img13.360buyimg.com/mobilecms/s140x140_jfs/t3229/10/2021133198/376218/cfcc06cb/57d8e84eNfe92eae8.jpg" alt="">
+            <sectiion class="pro-detail">
+              <h5>新疆大枣</h5>
+              <p>60斤</p>
+              <em>￥123.00</em>
+            </sectiion>
+          </section>
+        </li>
+      </ul>
+      <section class="pro-post">
+         <b>包邮</b>
+         <span>商家包邮</span>
+      </section>
+    </section>
 
-</div>
+
+  </section>
+</section>

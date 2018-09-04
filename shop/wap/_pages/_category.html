@@ -1,5 +1,22 @@
-<link rel="stylesheet" href="../assets/css/index.min.css">
+<link rel="stylesheet" href="../assets/css/category.min.css">
 <!--分类-->
-<div>
-  <br> 分类
-</div>
+<section class="category-wrap">
+  <ul class="left">
+    <li class="item" v-for="i in 20">
+      <a href="#">男装女装</a>
+    </li>
+  </ul>
+  <section class="right">
+    <section v-for="j in 4">
+      <h4>热卖选购</h4>
+      <section class="pro-list">
+        <section v-for="i in 9" class="pro-item">
+          <a href="#">
+              <img src="https://img13.360buyimg.com/focus/jfs/t13111/296/562407882/5437/708e24a6/5a0ebc62Nec865e68.jpg">
+              <span>时尚羽绒</span>
+            </a>
+        </section>
+      </section>
+    </section>
+  </section>
+</section>

@@ -1,7 +1,8 @@
 @import './common/index';
+
 .wrap {
   overflow: hidden;
-  background:#eee;
+  background: #eee;
   .nav {
     position: fixed;
     top: 0;
@@ -10,16 +11,82 @@
     z-index: 2;
     height: 0.9rem;
     width: 100%;
-    background:linear-gradient(#dc78ff,#936cfd);
+    background: linear-gradient($secondColor,$mainColor);
     justify-content: space-between;
     align-items: center;
     font-family: 'iconfont';
-    & >* {
+    &.sub,&.other{
+      // background: red;
+      .nav-list {
+        &::before {
+          content: "\e602";
+          font-weight: lighter;
+        }
+      }
+
+      .search-txt {
+        padding: 0.2rem 0.3rem;
+        color: #FFF;
+        outline: none;
+        font-size: 0.28rem;
+      }
+
+      .search-input {
+        padding: 0.05rem 0.26rem;
+        margin: 0 0.15rem;
+
+        input {
+          background: transparent;
+          border: 0;
+          outline: none;
+          color: #FFF;
+          font-size: .24rem;
+          flex:1;
+        }
+
+        input::-webkit-input-placeholder {
+          color: #FFF;
+        }
+
+        input::-moz-placeholder {
+          /* Mozilla Firefox 19+ */
+          color: #FFF;
+        }
+
+        input:-moz-placeholder {
+          /* Mozilla Firefox 4 to 18 */
+          color: #FFF;
+        }
+
+        input:-ms-input-placeholder {
+          /* Internet Explorer 10-11 */
+          color: #FFF;
+        }
+      }
+    }
+
+    &.other{
+        h3{
+          color: #FFF;
+          text-align: center;
+          position: absolute;
+          width: 100%;
+          left: 0;
+          font-size: .3rem;
+          top: 50%;
+          transform: translateY(-50%);
+
+        }
+    }
+
+    & > * {
       display: inline-block;
     }
+
     .nav-list {
       margin-left: 0.22rem;
-      &::before{
+
+      &::before {
         content: "\e6b9";
         display: inline-block;
         width: 0.46rem;
@@ -28,39 +95,45 @@
         color: #FFF;
       }
     }
+
     .nav-search {
-      flex:2;
+      flex: 2;
       display: flex;
       align-items: center;
-      & .search-input{
-         flex:1;
-         border-radius: 5px;
-         background:#8c59c0;
-         margin:0 .15rem;
-         padding:0.12rem 0.26rem;
-         font-family: '微软雅黑','iconfont';
-         color: #FFF;
-         display: flex;
-         position: relative;
-         top: 1px;
-         align-items: center;
-         span{
-           font-size: 0.26rem;
-         }
-         &::before{
-           content: "\e627";
-           display: inline-block;
-           width: 0.38rem;
-           height: 0.36rem;
-           font-size: 0.36rem;
-           font-weight: lighter;
-           color: #FFF;
-         }
+
+      & .search-input {
+        flex: 1;
+        border-radius: 5px;
+        background: #8c59c0;
+        margin: 0 0.15rem;
+        padding: 0.12rem 0.26rem;
+        font-family: '微软雅黑','iconfont';
+        color: #FFF;
+        display: flex;
+        position: relative;
+        top: 1px;
+        align-items: center;
+
+        span {
+          font-size: 0.26rem;
+        }
+
+        &::before {
+          content: "\e627";
+          display: inline-block;
+          width: 0.38rem;
+          height: 0.36rem;
+          font-size: 0.36rem;
+          font-weight: lighter;
+          color: #FFF;
+        }
       }
     }
+
     .nav-car {
       margin-right: 0.22rem;
-      &::before{
+
+      &::before {
         content: "\e62c";
         display: inline-block;
         width: 0.46rem;
@@ -70,61 +143,99 @@
       }
     }
   }
-  .main{
+
+  .main {
     overflow: auto;
     width: 100%;
     padding: 0.9rem 0 1rem;
   }
-  .footer{
-    position:fixed;
+
+  .footer {
+    position: fixed;
     bottom: 0;
     width: 100%;
     background: #FFF;
     // height: 1rem;
     width: 100%;
     border-top: 1px solid #dfdfdf;
-    & ul{
-       display: flex;
-       justify-content:center;
-       align-items: center;
-       & li{
-         padding:.1rem .2rem;
-         display: flex;
-         flex-direction: row;
-         justify-content: center;
-         flex:1;
-         &.active i,&.active em{
-           color: $mainColor;
-         }
-         a{
-           &:hover {
-             color:#999 !important;
-           }
-           display: flex;
-           flex-direction: column;
-           justify-content: center;
-           align-items: center;
-           color: #999;
-           img{
-             width: .5rem;
-             height: .5rem;
-           }
-           i{
-              font-family: 'iconfont';
-              font-style: normal;
-              width: .5rem;
-              height: .5rem;
-              display: block;
-              font-size: .45rem;
-           }
-           em{
-              display: block;
-              text-align: center;
-              margin-top: .06rem;
-           }
-         }
-       }
-    }
 
+    & ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & li {
+        padding: 0.1rem 0.2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex: 1;
+
+        &.active em,
+        &.active i {
+          color: $mainColor;
+        }
+
+        a {
+          &:hover {
+            color: #999 !important;
+          }
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: #999;
+
+          img {
+            width: 0.5rem;
+            height: 0.5rem;
+          }
+
+          i {
+            font-family: 'iconfont';
+            font-style: normal;
+            width: 0.5rem;
+            height: 0.5rem;
+            display: block;
+            font-size: 0.45rem;
+          }
+
+          em {
+            display: block;
+            text-align: center;
+            margin-top: 0.06rem;
+          }
+        }
+      }
+    }
   }
+}
+/*公共样式*/
+input[type="checkbox"] {
+  position: absolute;
+  clip: rect(0,0,0,0);
+}
+
+input[type="checkbox"]+label::before {
+  content: '\e6ad';
+  display: inline-block;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  font-family: 'iconfont';
+  font-size: .5rem;
+  position: relative;
+  color:#e6e6e6;
+  top: 3px;
+}
+input[type="checkbox"]:checked +label::before {
+  content: "\e624";
+  display: inline-block;
+  width: .5rem;
+  height: .5rem;
+  font-family: iconfont;
+  font-size: .5rem;
+  color: $carColor;
+  position: relative;
+  top: 3px;
 }
