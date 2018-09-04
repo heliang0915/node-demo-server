@@ -1,8 +1,14 @@
 @import './common/index';
 
 .wrap {
+<<<<<<< HEAD
   overflow: hidden;
   background: #eee;
+=======
+  // overflow: hidden;
+  // overflow: auto;
+  background:#eee;
+>>>>>>> 2c0fd10b6e40c68f239f76e1e9be9430fd172fdd
   .nav {
     position: fixed;
     top: 0;
@@ -149,15 +155,81 @@
     width: 100%;
     padding: 0.9rem 0 1rem;
   }
+<<<<<<< HEAD
 
   .footer {
     position: fixed;
+=======
+  .footer{
+    position:fixed;
+    z-index: 2;
+>>>>>>> 2c0fd10b6e40c68f239f76e1e9be9430fd172fdd
     bottom: 0;
     width: 100%;
     background: #FFF;
     // height: 1rem;
     width: 100%;
     border-top: 1px solid #dfdfdf;
+<<<<<<< HEAD
+=======
+    & ul{
+       display: flex;
+       justify-content:center;
+       align-items: center;
+       & li{
+         padding:.1rem .2rem;
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         flex:1;
+         &.active i,&.active em{
+           color: $mainColor;
+         }
+         i{
+           display: block;
+           width: .28rem;
+           height: .28rem;
+           background: red;
+           text-align: center;
+           border-radius: 50%;
+           line-height: .3rem;
+           font-style: normal;
+           color: #FFF;
+           position: relative;
+           top:-.1rem;
+           left: -.26rem;
+           font-size:.2rem;
+         }
+         a{
+           &:hover {
+             color:#999 !important;
+           }
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           color: #999;
+           img{
+             width: .5rem;
+             height: .5rem;
+           }
+           i{
+              font-family: 'iconfont';
+              font-style: normal;
+              width: .5rem;
+              height: .5rem;
+              display: block;
+              font-size: .45rem;
+           }
+           em{
+              display: block;
+              text-align: center;
+              margin-top: .06rem;
+           }
+         }
+       }
+    }
+>>>>>>> 2c0fd10b6e40c68f239f76e1e9be9430fd172fdd
 
     & ul {
       display: flex;

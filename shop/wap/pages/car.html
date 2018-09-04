@@ -97,6 +97,8 @@
               <img :src="selectIndex==i?t.active:t.img" alt="">
               <em :style="{color:selectIndex==i?'#956bff':'#000'}">{{t.label}}</em>
            </a>
+           <!--控制显示-->
+           <i v-if="i==3">8</i>
         </li>
       </ul>
     </footer>
@@ -119,7 +121,7 @@
       main.style.height = diff + "px";
       app.style.height = winHeight + "px";
     }
-    window.onresize = computedInner;
+    // window.onresize = computedInner;
    var vm=new Vue({
       el:'#app',
       data:{
@@ -127,29 +129,34 @@
         toolbar:[{
             label:'首页',
             img:'../assets/images/index.svg',
-            active:'../assets/images/index-active.svg'
+            active:'../assets/images/index-active.svg',
+            link:'../pages/index.html'
         },{
           label:'分类',
           img:'../assets/images/category.svg',
-          active:'../assets/images/category-active.svg'
+          active:'../assets/images/category-active.svg',
+          link:'../pages/category.html'
         },{
           label:'发现',
           img:'../assets/images/find.svg',
-          active:'../assets/images/find-active.svg'
+          active:'../assets/images/find-active.svg',
+          link:'../pages/find.html'
         },{
           label:'购物车',
           img:'../assets/images/car.svg',
-          active:'../assets/images/car-active.svg'
+          active:'../assets/images/car-active.svg',
+          link:'../pages/car.html'
         },{
           label:'我的',
           img:'../assets/images/me.svg',
-          active:'../assets/images/me-active.svg'
+          active:'../assets/images/me-active.svg',
+          link:'../pages/me.html'
         }]
       },
       mounted:function(){
-        setTimeout(function(){
-          computedInner();
-        },100)
+        // setTimeout(function(){
+        //   computedInner();
+        // },100)
       },
       methods:{
         changeTab:function(index){
