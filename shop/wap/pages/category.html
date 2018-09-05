@@ -8,15 +8,15 @@
   <meta content="black" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
   <meta content="email=no" name="format-detection">
-  <link rel="stylesheet" href="https://static.blogapi.top/assets/js/plugins/iSlider/iSlider.min.css">
-  <link rel="stylesheet" href="http://www.17sucai.com/preview/584108/2018-07-07/shop/css/swiper.min.css">
+  <link rel="stylesheet" href="//static.blogapi.top/assets/js/plugins/iSlider/iSlider.min.css">
+  <link rel="stylesheet" href="//static.blogapi.top/assets/js/plugins/swiper/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/reset.min.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/layout.min.css">
 </head>
 <body>
   <section class="wrap" id='app' v-cloak>
     <!-- 头部 -->
-    <header class="nav" id="topbar">
+    <header class="nav" id="topbar" style="display:none">
       <!--分类图标-->
       <a href="###" class="nav-list"></a>
       <section class="nav-search">
@@ -38,7 +38,7 @@
       <a href="###" class="search-txt">搜索</a>
     </header>
     <!--头部3-->
-    <header class="nav other" id="topbar3" style="display:none">
+    <header class="nav other" id="topbar3" >
       <!--分类图标-->
       <a href="###" class="nav-list"></a>
       <section class="nav-search">
@@ -95,7 +95,7 @@
 
     </main>
     <!-- 底部 -->
-    <footer style="display:none">
+    <footer style="display:block">
       <section class="pay-toolbar">
           <section class="select-wrap">
               <input type="checkbox" id='selectAll'><label for="selectAll">全选</label>
@@ -107,7 +107,7 @@
           <span class="pay-btn">去结算</span>
       </section>
     </footer>
-    <footer class="footer" id="footer" style="display:block">
+    <footer class="footer" id="footer" style="display:none">
       <ul>
         <li v-for="(t,i) in toolbar" @click="changeTab(i)">
           <a :href="t.link">

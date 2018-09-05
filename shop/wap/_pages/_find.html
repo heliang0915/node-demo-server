@@ -1,5 +1,74 @@
-<link rel="stylesheet" href="../assets/css/index.min.css">
+<link rel="stylesheet" href="../assets/css/find.min.css">
 <!--发现-->
-<div>
-  <br> 发现
-</div>
+<section class="find-wrap">
+  <!--导航 -->
+  <section class="find-nav" id="navs">
+    <section class="swiper-wrapper">
+      <section class="swiper-slide">
+        <a class="active" href="##">精选</a>
+      </section>
+      <section class="swiper-slide">
+        <a href="##">直播</a>
+      </section>
+      <section class="swiper-slide">
+        <a href="##">视频购</a>
+      </section>
+      <section class="swiper-slide">
+        <a href="##">社区</a>
+      </section>
+      <section class="swiper-slide">
+        <a href="##">家具生活</a>
+      </section>
+      <section class="swiper-slide">
+        <a href="##">生鲜数码</a>
+      </section>
+      <section class="swiper-slide">
+        <a href="##">个人洗护</a>
+      </section>
+      <section class="swiper-slide">
+        <a href="##">海外直邮</a>
+      </section>
+      <section class="swiper-slide">
+        <a href="##">服饰</a>
+      </section>
+    </section>
+  </section>
+  <!-- banner -->
+  <section class="find-banner">
+    <section class="iSlider-wrapper" id="banner-wrap"></section>
+  </section>
+</section>
+<script type="text/javascript">
+  setTimeout(function() {
+    var list = [{
+      content: 'https://static.blogapi.top/assets/images/shop/1.jpg'
+    }, {
+      content: 'https://static.blogapi.top/assets/images/shop/1.jpg'
+    }]
+    /**
+     * banner
+     */
+    var S = new iSlider({
+      dom: document.getElementById('banner-wrap'),
+      data: list,
+      isOverspread: 1,
+      isAutoplay: 1,
+      animateTime: 800,
+      isLooping: true,
+      plugins: ['dot']
+      // ,
+      // animateType: 'rotate'
+    });
+
+
+    // 秒杀商品滑动
+    var swiper = new Swiper('#navs', {
+      slidesPerView: 5,
+      spaceBetween: 5,
+      freeMode: true
+    });
+
+
+
+  }, 500)
+</script>

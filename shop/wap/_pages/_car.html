@@ -9,7 +9,11 @@
   <!--分类 -->
   <section class="car-list">
     <section v-for="(k,i) in 4" class="car-item">
-      <input type="checkbox" :id="'smSel'+i"> <label :for="'smSel'+i">Apple产品专营店</label>
+      <section class="shop-title">
+          <input type="checkbox" :id="'smSel'+i">
+          <label :for="'smSel'+i">Apple产品专营店</label>
+          <em>&#xe602;</em>
+      </section>
       <ul class="car-group">
         <li class="pro-item" v-for='j in 2'>
           <section>

@@ -1,9 +1,7 @@
 @import './common/_index';
 
 .car-wrap {
-
   height: 100%;
-
   .title {
     display: flex;
     justify-content: space-between;
@@ -17,22 +15,43 @@
   }
   .car-item{
      background: #FFF;
-     margin-bottom: .2rem;
-     padding: 0 0.4rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+    .shop-title{
+      padding:0.2rem 0.3rem .26rem;
+      background:#f6f6f6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      em{
+        font-family: 'iconfont';
+        display:inline-block;
+        width: .3rem;
+        height: .3rem;
+        line-height: .3rem;
+        transform: rotate(-180deg);
+        font-style: normal;
+        font-size: .36rem;
+      }
+    }
   }
 
   .car-list {
     // padding: 0.2rem 0;
     label {
       font-size: 0.28rem;
-
+      position: relative;
+      top: -.1rem;
       &::before {
         margin-right: 0.1rem;
+        top: 5px;
       }
     }
 
     .car-group {
       .pro-item {
+        padding:0 .3rem;
         display: flex;
         align-items: center;
         border-bottom: 1px solid #eee;
@@ -70,7 +89,7 @@
       }
     }
     .pro-post {
-      padding: 0.3rem 0.2rem;
+      padding: 0.3rem 0.4rem;
 
       b {
         padding: 0.1rem 0.2rem;
@@ -117,7 +136,7 @@
 
   }
   .pay-btn{
-     padding:.4rem .8rem;
+     padding:.41rem .8rem;
      display: block;
      font-size: .3rem;
      background: $carColor;

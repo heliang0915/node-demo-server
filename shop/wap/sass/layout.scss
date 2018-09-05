@@ -67,15 +67,15 @@
         }
       }
     }
-
     &.other {
+      height: 1rem;
       h3 {
         color: #FFF;
         text-align: center;
         position: absolute;
         width: 100%;
         left: 0;
-        font-size: 0.3rem;
+        font-size: 0.32rem;
         top: 50%;
         transform: translateY(-50%);
       }
@@ -262,8 +262,8 @@ input[type="checkbox"]:checked +label::before {
 //计数器
 .counter {
   position: absolute;
-  bottom: 0.1rem;
-  right: -.2rem;
+  bottom: 0.2rem;
+  right: .2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -285,5 +285,34 @@ input[type="checkbox"]:checked +label::before {
   }
   .plus {
     border-radius: 0 3px 3px 0;
+  }
+}
+
+.iSlider-wrapper {
+  height: 100%;
+  width: 100%;
+
+  a {
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.islider-dot-wrap {
+  bottom: .1rem;
+  .islider-dot {
+    width: 0.15rem;
+    height: 0.15rem;
+    background: #000;
+    border-width: 0;
+    opacity: 0.5;
+    &.active {
+      background: $mainColor;
+      opacity: 1;
+    }
   }
 }
