@@ -1,0 +1,230 @@
+@import './common/_index';
+
+.me-wrap {
+  height: 100%;
+
+  .me-top {
+    // padding: 0 0.2rem;
+    background: url("http://www.17sucai.com/preview/584108/2018-07-07/shop/img/home-bg.jpg");
+    background-size: cover;
+    height: 3.2rem;
+    width: 100%;
+    position: relative;
+
+    .me-top-bar {
+      position: absolute;
+      right: 0.1rem;
+      top: 0.3rem;
+      width: 0.1.5rem;
+
+      i {
+        display: inline-block;
+        font-family: 'iconfont';
+        width: 0.4rem;
+        height: 0.4rem;
+        font-style: normal;
+        font-size: 0.42rem;
+        color: #FFF;
+        font-weight: 400;
+        margin-right: 0.1rem;
+      }
+    }
+
+    .me-info {
+      position: absolute;
+      bottom: -0.6rem;
+      left: 0.3rem;
+      display: flex;
+      align-items: center;
+
+      .me-photo {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+      }
+
+      h4 {
+        color: #FFF;
+        font-weight: 400;
+        margin: 0 0 0.5rem 0.3rem;
+        font-size: 0.3rem;
+      }
+    }
+  }
+
+  .me-center {
+    background: #FFF;
+    padding: 0.2rem;
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        &:nth-last-child(1) {
+          a {
+            border-right: 1px solid transparent;
+          }
+        }
+
+        a {
+          display: flex;
+          padding: 0.1rem 0.22rem;
+          flex-direction: column;
+          justify-content: center;
+          border-right: 1px solid #eee;
+
+          em,
+          i {
+            text-align: center;
+            font-style: normal;
+            font-size: 0.26rem;
+            margin-bottom: 0.1rem;
+          }
+
+          i {
+            font-weight: bold;
+            font-size: 0.3rem;
+          }
+
+          em {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .order-info {
+    // padding: 0.3rem 0.2rem 0.3rem 0.4rem;
+    margin-top: 0.2rem;
+
+    .order-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 0.2rem;
+      background: #FFF;
+
+      h4 {
+        font-size: 0.3rem;
+        font-weight: 400;
+
+        &::before {
+          content: '\e603';
+          width: 0.4rem;
+          height: 0.4rem;
+          display: inline-block;
+          font-family: 'iconfont';
+          font-size: 0.4rem;
+          color: #999;
+          margin: 0 0.1rem;
+        }
+      }
+
+      a {
+        color: #999;
+      }
+    }
+
+    .order-list {
+      background: #FFF;
+      padding: 0.3rem 0;
+      display: flex;
+      justify-content: space-between;
+
+      .order-item {
+        flex: 1;
+        // margin-right: .6rem;
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          i {
+            display: block;
+            width: 0.6rem;
+            height: 0.6rem;
+            font-family: 'iconfont';
+            font-size: 0.6rem;
+            font-style: normal;
+            text-align: center;
+            color: #666;
+            font-weight: 400;
+            margin-bottom: 0.2rem;
+          }
+
+          em {}
+        }
+      }
+    }
+  }
+
+  .me-list {
+    margin-top: 0.16rem;
+    // padding: 0.2rem 0.3rem;
+    background-color: #FFF;
+    &:nth-last-child(1){
+      margin-bottom: .4rem;
+    }
+    .me-item {
+      &:nth-last-child(1){
+        border-bottom: 0px solid #eee;
+      }
+      border-bottom: 1px solid #eee;
+      padding: .2rem 0 .3rem 0;
+      a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin:0 .2rem 0 .3rem;
+        em {
+          font-size: 0.26rem;
+          &::before {
+            content: '\e6c8';
+            width: 0.5rem;
+            height: 0.5rem;
+            font-size: 0.5rem;
+            display: inline-block;
+            font-family: 'iconfont';
+            position: relative;
+            color: #999;
+            top: 6px;
+          }
+          &.yh::before{
+            content: '\e619';
+            font-size: 0.54rem;
+          }
+          &.zl::before{
+            content: '\e62d';
+            font-size: 0.4rem;
+          }
+          &.fk::before{
+            content: '\e6af';
+            font-size: 0.36rem;
+          }
+        }
+        section {
+          span{
+            position: relative;
+            top:.21rem;
+            font-size: 0.28rem;
+          }
+          &::after {
+            content: '\e602';
+            width: 0.5rem;
+            height: 0.5rem;
+            transform: rotate(-180deg);
+            display: inline-block;
+            font-family: 'iconfont';
+            font-size: 0.34rem;
+            position: relative;
+            top: 2px;
+          }
+        }
+      }
+    }
+  }
+}

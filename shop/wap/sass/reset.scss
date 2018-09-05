@@ -1,11 +1,11 @@
-@import './common/index';
+@import './common/_index';
 @font-face {
   font-family: 'iconfont';  /* project id 815778 */
-  src: url('//at.alicdn.com/t/font_815778_wmv0g014j4j.eot');
-  src: url('//at.alicdn.com/t/font_815778_wmv0g014j4j.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_815778_wmv0g014j4j.woff') format('woff'),
-  url('//at.alicdn.com/t/font_815778_wmv0g014j4j.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_815778_wmv0g014j4j.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_815778_q86juaiybzn.eot');
+  src: url('//at.alicdn.com/t/font_815778_q86juaiybzn.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_815778_q86juaiybzn.woff') format('woff'),
+  url('//at.alicdn.com/t/font_815778_q86juaiybzn.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_815778_q86juaiybzn.svg#iconfont') format('svg');
 }
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -126,6 +126,7 @@ a,a:hover,a:active,a:visited,a:link,a:focus{
     outline:none;
     // background: none;
     text-decoration: none;
+    color:#000;
 }
 
 section {

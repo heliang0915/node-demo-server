@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="../assets/css/category.min.css">
 <!--分类-->
 <section class="category-wrap">
-  <ul class="left">
-    <li class="item" v-for="i in 20">
-      <a href="#">男装女装</a>
+  <ul class="left" id='left'>
+    <li class="item" v-for="i in 18">
+      <a href="#">男装女装{{i}}</a>
     </li>
   </ul>
-  <section class="right">
+  <section class="right" id='right'>
     <section v-for="j in 4">
       <h4>热卖选购</h4>
       <section class="pro-list">
@@ -20,3 +20,24 @@
     </section>
   </section>
 </section>
+<script>
+   setTimeout(()=>{
+      var dom=(document.documentElement||document.body);
+      var  doc=dom.clientHeight;
+      var  topbar=document.getElementById('topbar3').clientHeight;
+      var  footer=document.getElementById('footer').clientHeight;
+      var  left=document.getElementById('left');
+      var  right=document.getElementById('right');
+      var diff=doc-topbar-footer;
+      left.addEventListener('touchmove',(e)=>{
+        console.log('letf_move....');
+        e.stopPropagation();
+      });
+      right.addEventListener('touchmove',(e)=>{
+        console.log('right_move...');
+        e.stopPropagation();
+      });
+      left.style.height=diff+'px';
+      right.style.height=diff+'px';
+   },1000)
+</script>
