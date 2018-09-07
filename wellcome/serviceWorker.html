@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+   <meta name="apple-mobile-web-app-capable" content="yes"/>
+   <meta content="telephone=yes" name="format-detection"/>
+   <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+   <meta name="x5-fullscreen" content="true"/>
+   <meta name="apple-touch-fullscreen" content="yes"/>
+   <link rel="apple-touch-icon" sizes="57x57" href="img/logo-k.png"/>
+   <link href="img/page-icon.png" rel="shortcut icon"/>
+   <link rel="manifest" href="manifest.json" />
+  <title>Document</title>
+</head>
+<body>
+  11
+  <img src="https://m.360buyimg.com/mobilecms/s220x220_jfs/t4609/82/3930097281/257779/31a2cad7/590a9282N051ca8c4.jpg!q70.jpg.dpg" alt="">
+  <script>
+    function loadServiceWoker() {
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('./service.js', {
+          scope: './'
+        }).then(function(reginstration) {
+          console.log('注册成功~~');
+          var serviceWorker;
+          if (reginstration.installing) { //正在注册
+            serviceWorker = reginstration.installing;
+          } else if (reginstration.waiting) {
+            serviceWorker = reginstration.waiting;
+          } else if (reginstration.active) {
+            serviceWorker = reginstration.active;
+          }
+          if (serviceWorker) {
+            console.log("serviceWorker状态变化:%s", serviceWorker.state);
+            serviceWorker.addEventListener('statechange', function(e) {
+              console.log("状态发生变化%s", e.target.state);
+            });
+          }
+        }).catch(function(err) {
+          console.log('注册失败~~' + err);
+        })
+      }
+    }
+
+    loadServiceWoker();
+    testNotification();
+    function testNotification() {
+      Notification.requestPermission().then((result) => {
+        // 其中granted表示用户允许通知，denied表示用户嫌弃你，default表示用户目前还没有管你。
+        if (Notification.permission == "granted") {
+          console.log(result);
+          var notification = new Notification('我是通知标题', {
+            body: "我是通知信息",
+            icon: "https://m.360buyimg.com/mobilecms/s220x220_jfs/t4609/82/3930097281/257779/31a2cad7/590a9282N051ca8c4.jpg!q70.jpg.dpg",
+            vibrate: [2000, 2000, 2000]
+            // , //例如[200, 100, 200]表示设备振动200毫秒，然后停止100毫秒，再振动200毫秒。
+            // silent: true //通知出现的时候，是否要有声音。默认false, 表示无声。
+          });
+          //点击通知
+          notification.onclick = function() {
+            //关闭通知
+            Notification.close();
+            console.log("点击通知了")
+          }
+          //通知异常
+          notification.onerror=function(){
+              console.log("通知出现异常");
+          }
+          notification.onclose=function(){
+              console.log("通知关闭");
+          }
+
+        }
+      })
+
+
+
+
+    }
+  </script>
+</body>
+
+</html>

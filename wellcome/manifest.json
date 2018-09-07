@@ -1,0 +1,47 @@
+{
+  "name": "哔哩哔哩web版",
+  "short_name" :"bilibili",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#de698c",
+  "background_color": "#fff",
+  "icons": [{
+    "src": "//s1.hdslb.com/bfs/static/mult/images/app_logo.png@36w_36h.png",
+    "sizes": "36x36",
+    "type": "image/png"
+  }, {
+    "src": "//s1.hdslb.com/bfs/static/mult/images/app_logo.png@48w_48h.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }, {
+    "src": "//s1.hdslb.com/bfs/static/mult/images/app_logo.png@72w_72h.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }, {
+    "src": "//s1.hdslb.com/bfs/static/mult/images/app_logo.png@96w_96h.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }, {
+    "src": "//static.hdslb.com/mobile/img/512.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "//static.hdslb.com/mobile/img/512.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }, {
+    "src": "//static.hdslb.com/mobile/img/512.png",
+    "sizes": "256x256",
+    "type": "image/png"
+  }, {
+    "src": "//static.hdslb.com/mobile/img/512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "permissions": {
+    "desktop-notification": {
+      "description": "Needed for creating system notifications."
+    }
+  }
+}

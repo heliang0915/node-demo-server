@@ -1,11 +1,12 @@
 @import './common/_index';
 .find-wrap{
+  overflow: hidden;
   .find-nav{
     background: #FFF;
     .swiper-slide{
       padding:.3rem 0;
       text-align: center;
-      margin-right: 0;
+      margin-right: 0 !important;
       a{
        padding: .2rem .13rem;
        white-space: nowrap;
@@ -20,5 +21,55 @@
   .find-banner{
      height: 2.8rem;
      position: relative;
+  }
+  .find-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #FFF;
+    padding:.3rem .22rem;
+    li{
+      a{
+        margin:.1rem 0 .3rem;
+        flex-direction: column;
+        text-align: left;
+        display: inline-block;
+        height: 100%;
+        img{
+          width:3.4rem;
+          height:3.6rem;
+          border-radius: 2px;
+          margin-bottom: .1rem;
+        }
+        p{
+          font-size: .26rem;
+          line-height: .26rem;
+          color: #000;
+          max-width: 3.4rem;
+        }
+        .price{
+          margin: .12rem 0;
+          i{
+            display: inline-block;
+            background:linear-gradient(to right,$carColor,$mainColor);
+            padding:.08rem .1rem;
+            border-radius: .2rem 0 .2rem 0;
+            color: #FFF;
+            font-style: normal;
+          }
+          em{
+            color: $carColor;
+            font-size: .32rem;
+            font-weight: 400;
+            margin-left: .2rem;
+            position: relative;
+            bottom: -4px;
+          }
+        }
+        .desc{
+          color: #999;
+        }
+      }
+    }
   }
 }

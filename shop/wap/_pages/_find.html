@@ -37,13 +37,28 @@
   <section class="find-banner">
     <section class="iSlider-wrapper" id="banner-wrap"></section>
   </section>
+  <!-- 列表-->
+  <ul class="find-list">
+    <li v-for="i in 10">
+      <a href="###">
+        <img src="https://img14.360buyimg.com/evalpic/s400x400_jfs/t23074/92/50753848/374051/d94f8dcc/5b23dd31N6e5b14af.jpg!q70.dpg" alt="">
+        <p>这件商品的描述信息这件商品的描述信息这件</p>
+        <section class="price">
+          <i>2人拼团</i>
+          <em>¥1.00</em>
+        </section>
+        <span class="desc">已拼团2.2万件</span>
+      </a>
+    </li>
+  </ul>
+  
 </section>
 <script type="text/javascript">
   setTimeout(function() {
     var list = [{
       content: 'https://static.blogapi.top/assets/images/shop/1.jpg'
     }, {
-      content: 'https://static.blogapi.top/assets/images/shop/1.jpg'
+      content: '//static.blogapi.top/assets/images/shop/1.jpg'
     }]
     /**
      * banner
@@ -56,19 +71,12 @@
       animateTime: 800,
       isLooping: true,
       plugins: ['dot']
-      // ,
-      // animateType: 'rotate'
     });
-
-
-    // 秒杀商品滑动
+    // 导航滑动
     var swiper = new Swiper('#navs', {
       slidesPerView: 5,
-      spaceBetween: 5,
+      // spaceBetween:1,
       freeMode: true
     });
-
-
-
   }, 500)
 </script>

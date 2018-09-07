@@ -49,49 +49,36 @@
     </header>
     <!--主体-->
     <main class="main" id="main">
-      <link rel="stylesheet" href="../assets/css/search.min.css">
-<!--搜索建议-->
-<section class="search-wrap">
-  <!-- 最近搜索区域 -->
-  <section style="display:none">
-    <!--最近搜索  -->
-    <section class="search-sug">
-      <section class="sug-title">
-        <h4>最近搜索</h4>
-        <a class="del" href="##">&#xe633;</a>
-      </section>
-      <ul>
-        <li v-for="i in 10" class="sug-item"><a href="#">剃须刀{{i}}</a></li>
-      </ul>
-    </section>
-    <!--热门搜索-->
-    <section class="search-sug">
-      <section class="sug-title">
-        <h4>热门搜索</h4>
-        <!-- <a class="del" href="##">&#xe633;</a> -->
-      </section>
-      <ul class="sug-list">
-        <li v-for="i in 10" class="sug-item"><a href="#">剃须刀{{i}}</a></li>
-      </ul>
-    </section>
-  </section>
-
-  <!--搜索列表-->
-  <section class="result-list">
-    <ul>
-      <li v-for="i in 5" class="result-item">
-        <em>关键字</em>
-        <section>
-          <ul class="sug-list">
-            <li class="sug-item" v-for="i in 3">
-              <a href="###">剃须刀</a>
-            </li>
-          </ul>
-        </section>
-      </li>
-    </ul>
-  </section>
+      <link rel="stylesheet" href="../assets/css/detail.min.css">
+<section class="detail-wrap">
+   详情页
+   <!-- banner -->
+   <section class="pro-banner">
+     <section class="iSlider-wrapper" id="banner-wrap"></section>
+   </section>
 </section>
+<script>
+setTimeout(function() {
+  var list = [{
+    content: 'https://static.blogapi.top/assets/images/shop/1.jpg'
+  }, {
+    content: '//static.blogapi.top/assets/images/shop/1.jpg'
+  }]
+  /**
+   * banner
+   */
+  var S = new iSlider({
+    dom: document.getElementById('banner-wrap'),
+    data: list,
+    isOverspread: 1,
+    isAutoplay: 1,
+    animateTime: 800,
+    isLooping: true,
+    plugins: ['dot']
+  });
+  }, 500)
+
+</script>
 
     </main>
     <!-- 底部 -->

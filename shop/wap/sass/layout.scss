@@ -6,6 +6,7 @@
 
   .nav {
     position: fixed;
+    transform: translateZ(0); 
     top: 0;
     left: 0;
     display: flex;
@@ -77,6 +78,7 @@
         left: 0;
         font-size: 0.32rem;
         top: 50%;
+        font-weight: 400;
         transform: translateY(-50%);
       }
     }
@@ -154,6 +156,7 @@
 
   .footer {
     position: fixed;
+    transform: translateZ(0);
     z-index: 2;
     bottom: 0;
     width: 100%;

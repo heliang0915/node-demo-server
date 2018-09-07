@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="../assets/css/detail.min.css">
+<section class="detail-wrap">
+   详情页
+   <!-- banner -->
+   <section class="pro-banner">
+     <section class="iSlider-wrapper" id="banner-wrap"></section>
+   </section>
+</section>
+<script>
+setTimeout(function() {
+  var list = [{
+    content: 'https://static.blogapi.top/assets/images/shop/1.jpg'
+  }, {
+    content: '//static.blogapi.top/assets/images/shop/1.jpg'
+  }]
+  /**
+   * banner
+   */
+  var S = new iSlider({
+    dom: document.getElementById('banner-wrap'),
+    data: list,
+    isOverspread: 1,
+    isAutoplay: 1,
+    animateTime: 800,
+    isLooping: true,
+    plugins: ['dot']
+  });
+  }, 500)
+
+</script>
