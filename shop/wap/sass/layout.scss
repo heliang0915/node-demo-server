@@ -6,7 +6,7 @@
 
   .nav {
     position: fixed;
-    transform: translateZ(0); 
+    transform: translateZ(0);
     top: 0;
     left: 0;
     display: flex;
@@ -317,5 +317,25 @@ input[type="checkbox"]:checked +label::before {
       background: $mainColor;
       opacity: 1;
     }
+  }
+}
+.money{
+   color: $carColor;
+   font-size: .28rem;
+}
+
+.star,.star-ative{
+  &::after{
+    display:inline-block;
+    content: '\e62b';
+    width: .3rem;
+    height: .3rem;
+    font-family: iconfont;
+    color: #ccc;
+  }
+}
+.star-ative{
+  &::after{
+    color: $carColor;
   }
 }

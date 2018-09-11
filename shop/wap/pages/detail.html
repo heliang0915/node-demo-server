@@ -51,33 +51,102 @@
     <main class="main" id="main">
       <link rel="stylesheet" href="../assets/css/detail.min.css">
 <section class="detail-wrap">
-   详情页
-   <!-- banner -->
-   <section class="pro-banner">
-     <section class="iSlider-wrapper" id="banner-wrap"></section>
-   </section>
+  <!-- banner -->
+  <section class="pro-banner">
+    <section class="iSlider-wrapper" id="banner-wrap"></section>
+    <h3>Apple 苹果 iPhone X 手机 全面屏 银色 64GB</h3>
+    <section class="banner-info">
+      <em class="money">￥123.00</em>
+      <span>月销售100万部</span>
+    </section>
+  </section>
+  <!-- 分类-->
+  <ul class="pro-category">
+    <li class="pro-item">
+      <a href="###">
+          <span>选择<em>颜色分类</em></span>
+        </a>
+    </li>
+    <li class="pro-item">
+      <a href="###">产品参数</a>
+    </li>
+  </ul>
+  <!-- 包换服务 -->
+  <ul class="pro-service">
+    <li>品质承诺</li>
+    <li>七天包换</li>
+    <li>如实描述</li>
+  </ul>
+  <!--用户评论  -->
+  <section class="user-comment">
+    <section class="comment-title">
+      <h4>用户评价(<em>10</em>条)</h4>
+      <p>100%好评</p>
+    </section>
+    <section class="comment-content">
+      <section class="comment-item" v-for="i in 4">
+        <section class="user-info">
+          <section class="user-photo">
+            <img src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3147546963,1786233214&fm=58" alt="">
+            <p>张三</p>
+          </section>
+          <section class="user-starts">
+            <a href="###" class="star-ative"></a>
+            <a href="###" v-for="i in 4" class="star"></a>
+          </section>
+        </section>
+        <p>这是一段文字描述这是一段文字描述这是一段文字描述这是一段文字描述</p>
+        <ul class="img-list">
+          <li v-for="i in 4">
+            <a href="##">
+              <img src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3147546963,1786233214&fm=58" alt="">
+            </a>
+          </li>
+        </ul>
+        <p class="pro-desc">产品描述</p>
+      </section>
+    </section>
+  </section>
+  <!-- 图文 -->
+  <section class="pro-imgs">
+      <h4>图文详情</h4>
+      <img src="https://img30.360buyimg.com/popWareDetail/jfs/t14719/85/1877166841/278152/3ae6ff0/5a5efcd6N154d1c5a.jpg" alt="">
+      <img src="https://img30.360buyimg.com/popWareDetail/jfs/t13027/52/352981969/231830/badc500e/5a095d00N15968051.jpg" alt="">
+      <img src="https://img10.360buyimg.com/imgzone/jfs/t9835/131/1905669916/3042823/cb300cef/59e9b116Nd9975bdc.jpg" alt="">
+  </section>
 </section>
 <script>
-setTimeout(function() {
-  var list = [{
-    content: 'https://static.blogapi.top/assets/images/shop/1.jpg'
-  }, {
-    content: '//static.blogapi.top/assets/images/shop/1.jpg'
-  }]
-  /**
-   * banner
-   */
-  var S = new iSlider({
-    dom: document.getElementById('banner-wrap'),
-    data: list,
-    isOverspread: 1,
-    isAutoplay: 1,
-    animateTime: 800,
-    isLooping: true,
-    plugins: ['dot']
-  });
+  setTimeout(function() {
+    var list = [{
+      content: 'https://m.360buyimg.com/n12/jfs/t13438/360/124743365/49464/474ae43b/5a03ffaeNeb7db52b.jpg!q70.jpg'
+    }, {
+      content: 'https://m.360buyimg.com/n12/jfs/t13438/360/124743365/49464/474ae43b/5a03ffaeNeb7db52b.jpg!q70.jpg'
+    }]
+    /**
+     * banner
+     */
+    //设置底部显示状态插件
+    iSlider.regPlugin('page', function() {
+      var dom = document.getElementsByClassName('iSlider-wrapper')[0];
+      var ele = document.createElement('div');
+      ele.className = "page-wrap";
+      ele.innerHTML = "<em id='page'>1</em>/" + list.length;
+      dom.appendChild(ele);
+      var page = document.getElementById('page');
+      this.on('slideChange', function(i, el) {
+        page.innerHTML = (i + 1)
+      });
+    });
+    var S = new iSlider({
+      dom: document.getElementById('banner-wrap'),
+      data: list,
+      isOverspread: 1,
+      isAutoplay: 1,
+      animateTime: 800,
+      isLooping: true,
+      plugins: ['page']
+    });
   }, 500)
-
 </script>
 
     </main>

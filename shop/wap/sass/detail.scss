@@ -1,12 +1,217 @@
 @import './common/_index';
 
-.detail-wrap{
+.detail-wrap {
   height: 100%;
-  margin-top: .14rem;
-  font-size: .3rem;
-  .pro-banner{
-     ul{
-       height: 3rem;
+  margin-top: 0.14rem;
+  font-size: 0.3rem;
+
+  .pro-banner {
+    position: relative;
+    background: #FFF;
+
+    ul {
+      height: 7.5rem;
+    }
+
+    h3 {
+      font-size: 0.32rem;
+      font-weight: 400;
+      padding: 0.3rem 0.2rem 0.1rem;
+    }
+
+    .banner-info {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.2rem 0.25rem;
+      color: #ccc;
+
+      em {
+        font-size: 0.36rem;
+      }
+
+      span {
+        font-size: 0.28rem;
+      }
+    }
+
+    .page-wrap {
+      position: absolute;
+      right: 0.3rem;
+      bottom: 1.6rem;
+      padding: 6px 20px;
+      background: #666;
+      opacity: 0.8;
+      border-radius: 20px;
+      text-align: center;
+      font-size: 0.28rem;
+      color: #FFF;
+
+      em {
+        font-size: 0.28rem;
+        font-style: normal;
+      }
+    }
+  }
+
+  .pro-category {
+    background: #FFF;
+    margin: 0.2rem 0;
+
+    .pro-item {
+      border-bottom: 1px solid #f1f1f1;
+
+      a {
+        padding: 0.4rem 0.3rem;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.28rem;
+
+        span {
+          font-size: 0.28rem;
+
+          em {
+            font-size: 0.28rem;
+          }
+        }
+
+        &::after {
+          content: '';
+          display: inline-block;
+          width: 0.16rem;
+          height: 0.16rem;
+          transform: rotate(45deg);
+          border: 2px solid #ccc;
+          border-bottom-width: 0;
+          border-left-width: 0;
+        }
+      }
+    }
+  }
+
+  .pro-service {
+    display: flex;
+    color: #999;
+    align-items: center;
+
+    li {
+      padding: 0.1rem 0.2rem;
+
+      &::before {
+        content: '\e601';
+        display: inline-block;
+        width: 0.3rem;
+        height: 0.3rem;
+        font-family: iconfont;
+        color: $mainColor;
+        font-size: 0.3rem;
+      }
+    }
+  }
+
+  .user-comment {
+    background: #FFF;
+    margin: 0.2rem 0;
+
+    .comment-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #F1F1F1;
+      padding: 0.26rem 0.3rem;
+
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 0.16rem;
+        height: 0.16rem;
+        transform: rotate(45deg);
+        border: 2px solid #ccc;
+        border-bottom-width: 0;
+        border-left-width: 0;
+      }
+
+      p {
+        position: relative;
+        left: 1.68rem;
+        color: #999;
+        font-size: 0.26rem;
+      }
+
+      h4 {
+        font-size: 0.28rem;
+        font-weight: 400;
+
+        em {
+          font-size: 0.3rem;
+          color: $mainColor;
+        }
+      }
+    }
+    .comment-content {
+      padding: 0.2rem 0.3rem;
+      display: none;
+      .comment-item{
+        border-bottom: 1px solid #F1F1F1;
+        margin-bottom: .16rem;
+        .user-info {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .user-photo {
+            display: flex;
+            align-items: center;
+            font-size: 0.28rem;
+
+            img {
+              width: 0.6rem;
+              height: 0.6rem;
+              border-radius: 50%;
+            }
+
+            p {
+              margin-left: 0.1rem;
+            }
+          }
+        }
+        p {
+          margin: 0.12rem 0;
+          line-height: 1.5;
+          font-size: 0.28rem;
+        }
+        .img-list {
+          display: flex;
+          align-items: center;
+          li {
+            flex: 1;
+            a {
+              img {
+                width: 1.5rem;
+                height: 1.5rem;
+              }
+            }
+          }
+        }
+        .pro-desc{
+          color: #999;
+          font-size: .24rem;
+        }
+      }
+    }
+  }
+
+  .pro-imgs{
+     background:#FFF;
+     margin:.2rem 0;
+     padding:.3rem 0;
+     h4{
+       font-size: .3rem;
+       text-align: center;
+       margin-bottom: .2rem;
+       font-weight: 400;
+     }
+     img{
+       width: 100%;
+       height: 100%;
      }
   }
 }

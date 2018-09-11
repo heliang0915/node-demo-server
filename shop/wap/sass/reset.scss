@@ -1,11 +1,11 @@
 @import './common/_index';
 @font-face {
   font-family: 'iconfont';  /* project id 815778 */
-  src: url('//at.alicdn.com/t/font_815778_q86juaiybzn.eot');
-  src: url('//at.alicdn.com/t/font_815778_q86juaiybzn.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_815778_q86juaiybzn.woff') format('woff'),
-  url('//at.alicdn.com/t/font_815778_q86juaiybzn.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_815778_q86juaiybzn.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_815778_uk0rnobz8l.eot');
+  src: url('//at.alicdn.com/t/font_815778_uk0rnobz8l.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_815778_uk0rnobz8l.woff') format('woff'),
+  url('//at.alicdn.com/t/font_815778_uk0rnobz8l.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_815778_uk0rnobz8l.svg#iconfont') format('svg');
 }
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -143,11 +143,12 @@ div{
     -webkit-overflow-scrolling: touch;
 }
 /*放置公共样式*/
-.icon-cjfl{background: url('//static.blogapi.top/assets/images/shop/sprite.png?temp=123') no-repeat 0px 0px;background-size: 174px 111px;width: 48px;height: 48px;}
-.icon-kbsc{background: url('//static.blogapi.top/assets/images/shop/sprite.png?temp=123') no-repeat -63px 0px;background-size: 174px 111px;width: 48px;height: 48px;}
-.icon-sjpj{background: url('//static.blogapi.top/assets/images/shop/sprite.png?temp=123') no-repeat 0px -63px;background-size: 174px 111px;width: 48px;height: 48px;}
-.icon-sjtx{background: url('//static.blogapi.top/assets/images/shop/sprite.png?temp=123') no-repeat -63px -63px;background-size: 174px 111px;width: 48px;height: 48px;}
-.icon-yqyl{background: url('//static.blogapi.top/assets/images/shop/sprite.png?temp=123') no-repeat -126px 0px;background-size: 174px 111px;width: 48px;height: 48px;}
+.icon-cjfl{background: url('//static.blogapi.top/assets/images/shop/sprite.png?222') no-repeat 0px 0px;background-size: 174px 111px;width: 48px;height: 48px;}
+.icon-kbsc{background: url('//static.blogapi.top/assets/images/shop/sprite.png?333') no-repeat -63px 0px;background-size: 174px 111px;width: 48px;height: 48px;}
+.icon-sjpj{background: url('//static.blogapi.top/assets/images/shop/sprite.png?222') no-repeat 0px -63px;background-size: 174px 111px;width: 48px;height: 48px;}
+.icon-sjtx{background: url('//static.blogapi.top/assets/images/shop/sprite.png?2222') no-repeat -63px -63px;background-size: 174px 111px;width: 48px;height: 48px;}
+.icon-yqyl{background: url('//static.blogapi.top/assets/images/shop/sprite.png?222') no-repeat -126px 0px;background-size: 174px 111px;width: 48px;height: 48px;}
+
 .islider-dot-wrap{
   z-index: 1;
 }
