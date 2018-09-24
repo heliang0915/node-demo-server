@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <meta content="email=no" name="format-detection">
+  <link rel="stylesheet" href="//static.blogapi.top/assets/js/plugins/iSlider/iSlider.min.css">
+  <link rel="stylesheet" href="//static.blogapi.top/assets/js/plugins/swiper/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/reset.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/layout.min.css">
+</head>
+<body>
+  <section class="wrap" id='app' v-cloak>
+    <!-- 头部 -->
+    <header class="nav" id="topbar" style="display:none">
+      <!--分类图标-->
+      <a href="###" class="nav-list"></a>
+      <section class="nav-search">
+        <section class="search-input"><span>请输入要检索的商品</span></section>
+      </section>
+      <!--购物车图标-->
+      <a href="###" class="nav-car"></a>
+    </header>
+    <!--头部2 -->
+    <header class="nav sub" id="topbar2" style="display:none">
+      <!--分类图标-->
+      <a href="###" class="nav-list"></a>
+      <section class="nav-search">
+        <section class="search-input">
+          <input type="text" placeholder="请输入要检索的商品">
+        </section>
+      </section>
+      <!--搜索-->
+      <a href="###" class="search-txt">搜索</a>
+    </header>
+    <!--头部3-->
+    <header class="nav other" id="topbar3" >
+      <!--分类图标-->
+      <a href="###" class="nav-list"></a>
+      <section class="nav-search">
+         <h3>购物车</h3>
+      </section>
+      <!--编辑-->
+      <a href="###" class="search-txt">编辑</a>
+    </header>
+    <!--主体-->
+    <main class="main" id="main">
+      <link rel="stylesheet" href="../assets/css/voucher.min.css">
+<!--卡券界面-->
+<section class="voucher-wrap">
+  <section class="voucher-title">
+    <ul class="voucher-top">
+      <li><a href="#">未使用</a></li>
+      <li><a href="#">已使用</a></li>
+      <li><a href="#">已过期</a></li>
+    </ul>
+    <span class="split"></span>
+  </section>
+  <section class="voucher-center">
+    内容
+  </section>
+</section>
+
+    </main>
+    <!-- 底部 -->
+    <footer style="display:none">
+      <section class="pay-toolbar">
+          <section class="select-wrap">
+              <input type="checkbox" id='selectAll'><label for="selectAll">全选</label>
+          </section>
+          <section class="pay-info">
+              <span class="big">合计:<em>¥150</em></span>
+              <span>不含运费</span>
+          </section>
+          <span class="pay-btn">去结算</span>
+      </section>
+    </footer>
+    <footer class="footer" id="footer" style="display:block;width:100%;height:1rem">
+      <ul style="position:absolute;top:0;width:100%;height:1rem">
+        <li v-for="(t,i) in toolbar" @click="changeTab(i)">
+          <a :href="t.link">
+              <img :src="selectIndex==i?t.active:t.img" alt="">
+              <em :style="{color:selectIndex==i?'#956bff':'#000'}">{{t.label}}</em>
+           </a>
+           <!--控制显示-->
+           <i v-if="i==3">8</i>
+        </li>
+      </ul>
+    </footer>
+  </section>
+  <script src="../assets/minjs/rem.min.js"></script>
+  <script src="//static.blogapi.top/assets/js/libs/vue.min.js"></script>
+  <script src="//static.blogapi.top/assets/js/plugins/iSlider/iSlider.min.js"></script>
+  <script src="//static.blogapi.top/assets/js/plugins/iSlider/iSlider.animate.min.js"></script>
+  <script src="//static.blogapi.top/assets/js/plugins/iSlider/iSlider.plugin.dot.min.js"></script>
+  <script src="//static.blogapi.top/assets/js/plugins/swiper/swiper.min.js"></script>
+  <script>
+    //计算内部高度
+    function computedInner() {
+      var winHeight = document.documentElement.clientHeight;
+      var navBarHeight = document.getElementById('topbar').offsetHeight;
+      var footerHeight = document.getElementById('footer').offsetHeight;
+      var main = document.getElementById('main');
+      var app = document.getElementById('app');
+      var diff = winHeight - navBarHeight - footerHeight;
+      main.style.height = diff + "px";
+      app.style.height = winHeight + "px";
+    }
+    // window.onresize = computedInner;
+   var vm=new Vue({
+      el:'#app',
+      data:{
+        selectIndex:0,
+        toolbar:[{
+            label:'首页',
+            img:'../assets/images/index.svg',
+            active:'../assets/images/index-active.svg',
+            link:'../pages/index.html'
+        },{
+          label:'分类',
+          img:'../assets/images/category.svg',
+          active:'../assets/images/category-active.svg',
+          link:'../pages/category.html'
+        },
+        {
+          label:'发现',
+          img:'../assets/images/find.svg',
+          active:'../assets/images/find-active.svg',
+          link:'../pages/find.html'
+        },
+        {
+          label:'购物车',
+          img:'../assets/images/car.svg',
+          active:'../assets/images/car-active.svg',
+          link:'../pages/car.html'
+        },{
+          label:'我的',
+          img:'../assets/images/me.svg',
+          active:'../assets/images/me-active.svg',
+          link:'../pages/me.html'
+        }]
+      },
+      mounted:function(){
+        // setTimeout(function(){
+        //   computedInner();
+        // },100)
+      },
+      methods:{
+        changeTab:function(index){
+          this.selectIndex=index;
+        }
+      }
+   })
+  </script>
+</body>
+</html>
